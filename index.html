@@ -226,11 +226,12 @@
   .bilan-raw { font-family: 'Courier New', monospace; font-size: 11px; color: var(--mid); white-space: pre-wrap; background: white; border: 1px solid var(--rule); border-radius: 3px; padding: 10px 12px; margin-top: 8px; line-height: 1.7; }
 
   .quicknav {
-    display: flex;
+    display: grid;
+    grid-template-columns: auto auto;
     gap: 8px;
     overflow-x: auto;
     padding: 0 0 12px;
-    margin-bottom: 36px;
+    margin-bottom: -20px;
     scrollbar-width: none;
     -ms-overflow-style: none;
   }
@@ -243,7 +244,7 @@
     flex-shrink: 0;
     background: var(--white);
     border: 1px solid var(--rule);
-    border-radius: 20px;
+    border-radius: 5px;
     padding: 7px 14px;
     font-family: 'Mulish', sans-serif;
     font-size: 12px;
