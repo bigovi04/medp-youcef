@@ -295,6 +295,7 @@
             <span class="symptom-tag">Troubles mnésiques</span>
             <span class="symptom-tag">Irritabilité marquée</span>
             <span class="symptom-tag">Légère atrophie hypophysaire (IRM)</span>
+            <span class="symptom-tag">Kyste lobe thyroïde droit</span>
           </div>
         </div>
       </div>
@@ -637,6 +638,53 @@
           <div class="tl-field"><label>Suivi Dr H. Delileche</label><p>Pédiatre, Khemis Miliana — de Fév. 2022 à Fév. 2025. État globalement équilibré en 2022, 2023 et début 2024.</p></div>
           <div class="tl-field"><label>Notes du Dr Delileche</label><p>Attitude scoliotique traitée par rééducation. Piste de l'asthme formellement éliminée. Gastrite avec RGO documentés. Poids : 49 kg / Taille : 145 cm (Oct. 2025).</p></div>
           <div class="tl-field"><label>Rupture d'équilibre (01/10/2024)</label><p><span class="val-high">TSH : 225 µUI/ml</span> (FT4 : 12,93) sous Levothyrox 150 µg. Puis au 12/02/2025 : <span class="val-high">TSH : 100 µUI/ml</span> (FT4 : 8,91) malgré passage à 175 µg.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12b — NOUVEAU : Échographie thyroïdienne 05/10/2024 -->
+    <div class="tl-entry" style="animation-delay:.395s">
+      <div class="tl-dot amber-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">05 Oct. 2024</span>
+          <span class="tl-badge badge-test">Échographie Thyroïdienne</span>
+          <span class="tl-title-text">Dr H. Delileche — Volume thyroïdien normal + kyste lobe droit (0,47 cm)</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin / Appareil</label><p>Dr H. Delileche (Endocrinologie pédiatrique) · Sonde linéaire 16 MHz, Samsung HS 40. Âge patient : 13 ans et 8 mois.</p></div>
+          <div class="tl-field"><label>Contexte</label><p>Bilan de suivi dans le cadre de la rupture d'équilibre thyroïdien — TSH à 225 µUI/ml (01/10/2024).</p></div>
+          <div class="tl-field"><label>Lobe droit</label><p>1,03 × 1,01 × 2,80 cm</p></div>
+          <div class="tl-field"><label>Lobe gauche</label><p>1,48 × 0,86 × 3,48 cm</p></div>
+          <div class="tl-field"><label>Isthme</label><p>0,16 cm (normal)</p></div>
+          <div class="tl-field"><label>Adénopathies / Axes vasculaires</label><p>Pas d'ADP. Axes vasculaires libres.</p></div>
+          <div class="tl-field full"><label>! Conclusion</label><p>Volume thyroïdien <span class="val-ok">normal</span>. Présence d'un <span class="val-high">kyste de 0,47 cm sur le lobe droit</span> — à surveiller. Ce kyste constitue une découverte nouvelle non documentée dans les examens antérieurs.</p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Document A1</span>
+              <span class="bilan-doc-title">Échographie Thyroïdienne — Dr H. Delileche</span>
+              <span class="bilan-doc-meta">05/10/2024 · Samsung HS 40 · 16 MHz · 13 ans</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-section-title">Mensurations</div>
+              <div class="bilan-row"><span class="bilan-row-label">Lobe droit</span><span class="bilan-row-val">1,03 × 1,01 × 2,80 cm</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Lobe gauche</span><span class="bilan-row-val">1,48 × 0,86 × 3,48 cm</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Isthme</span><span class="bilan-row-val val-ok">0,16 cm</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Volume thyroïdien</span><span class="bilan-row-val val-ok">Normal</span></div>
+              <div class="bilan-section-title">Lésion identifiée</div>
+              <div class="bilan-row"><span class="bilan-row-label">Kyste lobe droit</span><span class="bilan-row-val val-low">0,47 cm — à surveiller</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Adénopathies</span><span class="bilan-row-val val-ok">Absentes</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Axes vasculaires</span><span class="bilan-row-val val-ok">Libres</span></div>
+              <div class="bilan-conclusion"><strong>Conclusion :</strong> Volume thyroïdien normal. Kyste 0,47 cm lobe droit — surveillance échographique recommandée.</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1225,7 +1273,7 @@
       <span class="pill-tag badge-active">Actif</span>
       <span class="pill-main">Hypothyroïdie congénitale — difficile à équilibrer</span>
     </div>
-    <div class="pill-sub">Suivi par Pr. K.F. DJIDEL (CMC Kouba) depuis 2011. Dose actuelle : <strong>Levothyrox 200 µg/jour</strong> (depuis Nov. 2025). Historique de TSH extrêmement instable (pic : 751 700 µUI/ml). Possible origine centrale suspectée dès 2014 — confirmée par légère hypotrophie hypophysaire (IRM, 11/05/2026). Contrôle TSH post-ajustement à prévoir.</div>
+    <div class="pill-sub">Suivi par Pr. K.F. DJIDEL (CMC Kouba) depuis 2011. Dose actuelle : <strong>Levothyrox 200 µg/jour</strong> (depuis Nov. 2025). Historique de TSH extrêmement instable (pic : 751 700 µUI/ml). Possible origine centrale suspectée dès 2014 — confirmée par légère hypotrophie hypophysaire (IRM, 11/05/2026). Contrôle TSH post-ajustement à prévoir. Kyste lobe droit 0,47 cm découvert à l'échographie du 05/10/2024 — à surveiller.</div>
   </div>
 
   <div class="pill-card">
@@ -1264,6 +1312,14 @@
       <span class="pill-main">Lithiase vésiculaire (calculs biliaires)</span>
     </div>
     <div class="pill-sub">Découverte fortuite à l'échographie abdominale du 07/10/2025 (Dr BOUTAOUA). Asymptomatique à ce stade — à surveiller.</div>
+  </div>
+
+  <div class="pill-card">
+    <div class="pill-row">
+      <span class="pill-tag badge-monitoring">Surveillance</span>
+      <span class="pill-main">Kyste thyroïdien — lobe droit (0,47 cm)</span>
+    </div>
+    <div class="pill-sub">Découvert à l'échographie thyroïdienne du 05/10/2024 (Dr H. Delileche, sonde 16 MHz Samsung HS 40). Volume thyroïdien globalement normal. Kyste de 0,47 cm à surveiller par échographie de contrôle.</div>
   </div>
 
   <div class="pill-card">
@@ -1593,8 +1649,15 @@
   <div class="gap-card">
     <div class="gap-icon">!</div>
     <div class="gap-text">
-      <strong>Priorité 6 — Surveillance lymphangiectasies duodénales</strong>
+      <strong>Priorité 6 — Surveillance kyste thyroïdien lobe droit (0,47 cm)</strong>
+      Découvert à l'échographie thyroïdienne du 05/10/2024. Aucune échographie de contrôle documentée depuis. Un contrôle échographique thyroïdien de suivi est recommandé pour surveillance évolutive du kyste.
+    </div>
+  </div>
 
+  <div class="gap-card">
+    <div class="gap-icon">!</div>
+    <div class="gap-text">
+      <strong>Priorité 7 — Surveillance lymphangiectasies duodénales</strong>
       Identifiées à la FOGD (Dr Khodja, 05/11/2025). Les biopsies systématiques montrent une lymphocytose intraépithéliale ~30% et un chorion œdémateux — sans atrophie villositaire. À surveiller dans le contexte d'une possible malabsorption contribuant à l'instabilité thyroïdienne.
     </div>
   </div>
@@ -1602,7 +1665,7 @@
   <div class="gap-card">
     <div class="gap-icon">!</div>
     <div class="gap-text">
-      <strong>Priorité 7 — Évaluation neuropsychologique non réalisée</strong>
+      <strong>Priorité 8 — Évaluation neuropsychologique non réalisée</strong>
       Troubles mnésiques, cognitifs et comportementaux (irritabilité, régression) signalés mais non évalués par un spécialiste. Une évaluation neuropsychologique est fortement recommandée, en lien avec l'impact possible de l'hypothyroïdie chronique mal contrôlée sur le développement cérébral.
     </div>
   </div>
