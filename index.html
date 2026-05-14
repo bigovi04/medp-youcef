@@ -10,7 +10,7 @@
 <meta property="og:title" content="Chronologie Médicale — ESSAIDI Youcef">
 <meta property="og:description" content="Dossier médical chronologique complet — Hypothyroïdie congénitale, gastrite auto-immune, hypotrophie hypophysaire. Document de synthèse clinique.">
 <meta property="og:type" content="article">
-<link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;1,400&family=Mulish:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link href="yusu%20updated%20qab_files/css2.css" rel="stylesheet">
 <style>
   :root {
     --bg: #f9f8f6;
@@ -224,6 +224,41 @@
   .bilan-conclusion { font-size: 12px; color: var(--ink); background: white; border: 1px solid var(--rule); border-radius: 3px; padding: 8px 10px; margin-top: 10px; line-height: 1.6; grid-column: 1 / -1; }
   .bilan-conclusion strong { font-weight: 600; }
   .bilan-raw { font-family: 'Courier New', monospace; font-size: 11px; color: var(--mid); white-space: pre-wrap; background: white; border: 1px solid var(--rule); border-radius: 3px; padding: 10px 12px; margin-top: 8px; line-height: 1.7; }
+
+  .quicknav {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    padding: 0 0 12px;
+    margin-bottom: 36px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .quicknav::-webkit-scrollbar { display: none; }
+  .qnav-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    white-space: nowrap;
+    flex-shrink: 0;
+    background: var(--white);
+    border: 1px solid var(--rule);
+    border-radius: 20px;
+    padding: 7px 14px;
+    font-family: 'Mulish', sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--mid);
+    cursor: pointer;
+    transition: all .15s;
+    letter-spacing: 0.02em;
+  }
+  .qnav-btn:hover {
+    background: var(--accent-soft);
+    border-color: var(--accent);
+    color: var(--accent);
+  }
+  .qnav-icon { font-size: 13px; }
 </style>
 </head>
 <body>
@@ -239,17 +274,15 @@
   <div class="urgent-banner">
     <div class="urgent-icon">!</div>
     <div class="urgent-text">
-      <strong>Urgent — Légère hypotrophie hypophysaire confirmée · Consultation endocrinologique spécialisée requise</strong>
-      L'Angio-IRM cérébrale (11/05/2026, Dr LEKHAL) révèle une <strong>hypophyse à 4–4,5 mm</strong>
-      (norme : 6–7 mm pour l'âge) — légère hypotrophie hypophysaire. Pas d'HTIC, pas de masse intracrânienne. Le radiologue recommande une <strong>confrontation clinique avec les données hormonales</strong>.
-      Ce résultat renforce la suspicion d'hypothyroïdie d'origine centrale (secondaire) soulevée depuis 2014. Une consultation endocrinologique spécialisée est prioritaire. Présenter ce document à chaque rendez-vous médical.
+      <strong>Statut urgent — 13 Mai 2026 · Référence Hôpital Bainem</strong>
+      TSH <strong>19,25 µUI/ml</strong> (↑↑) malgré 200 µg Levothyrox. Dose augmentée à <strong>225 µg/jour</strong> + <strong>Vitamine D IM</strong> prescrite par Dr BOUHEDDA (13/05/2026). Suspicion d'<strong>HTIC bénigne</strong> secondaire à l'hypothyroïdie chronique. <strong>Courrier d'hospitalisation formel adressé au Prof. Azzouz (Hôpital Bainem)</strong>. Hypotrophie hypophysaire confirmée (4–4,5 mm, IRM 11/05/2026). Présenter ce document à chaque consultation.
     </div>
   </div>
 
   <!-- EN-TÊTE PATIENT -->
   <div class="patient-header">
     <div class="patient-photo-wrap">
-      <img class="patient-photo" src="https://raw.githubusercontent.com/fouadess04/bpublic/refs/heads/main/assets/YUSUF.jpeg" alt="Photo — ESSAIDI Youcef" onerror="this.style.display='none'">
+      <img class="patient-photo" src="yusu%20updated%20qab_files/YUSUF.jpeg" alt="Photo — ESSAIDI Youcef" onerror="this.style.display='none'">
       <span class="patient-photo-label">Youcef</span>
     </div>
     <div>
@@ -295,11 +328,44 @@
             <span class="symptom-tag">Troubles mnésiques</span>
             <span class="symptom-tag">Irritabilité marquée</span>
             <span class="symptom-tag">Légère atrophie hypophysaire (IRM)</span>
-            <span class="symptom-tag">Kyste lobe thyroïde droit</span>
           </div>
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- QUICK NAV -->
+
+
+
+
+
+<div class="section-heading" id="section-chronologie">
+    <span class="sec-num">—</span>
+    <span class="sec-title">Quick Actions</span>
+    <div class="sec-line"></div>
+  </div> <div class="quicknav no-print">
+    <button class="qnav-btn" onclick="document.getElementById('section-chronologie').scrollIntoView({behavior:'smooth',block:'start'})">
+       Chronologie
+    </button>
+    <button class="qnav-btn" onclick="document.getElementById('section-tsh').scrollIntoView({behavior:'smooth',block:'start'})">
+       Évolution TSH
+    </button>
+    <button class="qnav-btn" onclick="document.getElementById('section-problemes').scrollIntoView({behavior:'smooth',block:'start'})">
+       Problèmes Actifs
+    </button>
+    <button class="qnav-btn" onclick="document.getElementById('section-traitements').scrollIntoView({behavior:'smooth',block:'start'})">
+       Traitements
+    </button>
+    <button class="qnav-btn" onclick="document.getElementById('section-restrictions').scrollIntoView({behavior:'smooth',block:'start'})">
+       Restrictions
+    </button>
+    <button class="qnav-btn" onclick="document.getElementById('section-medecins').scrollIntoView({behavior:'smooth',block:'start'})">
+       Médecins
+    </button>
+    <button class="qnav-btn" onclick="document.getElementById('section-lacunes').scrollIntoView({behavior:'smooth',block:'start'})">
+       Lacunes
+    </button>
   </div>
 
   <!-- CHRONOLOGIE CLINIQUE -->
@@ -311,137 +377,1074 @@
 
   <div class="timeline">
 
-    <!-- 1 -->
-    <div class="tl-entry" style="animation-delay:.05s">
-      <div class="tl-dot amber-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">03 Fév. 2011</span>
-          <span class="tl-badge badge-episode">Naissance / Néonatal</span>
-          <span class="tl-title-text">Accouchement compliqué — hypoxie et apnée néonatale sévère</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Événement à la naissance</label><p>1–2 cris normaux, puis apnée / hypoxie sévère. Corps devenu rouge, puis cyanosé (violet/bleu). Réanimation d'urgence.</p></div>
-          <div class="tl-field"><label>Couveuse</label><p>De minuit à 08h30 (8h30) avec assistance respiratoire (oxygène).</p></div>
-          <div class="tl-field full"><label>Période post-natale (Fév.–Mai 2011)</label><p>Léthargie totale (ne pleure ni le jour ni la nuit), très faible appétit (max 4 tétées), incapacité initiale à téter. Constipation sévère nécessitant des suppositoires. Extrémités (mains/pieds) constamment froides et cyanosées malgré des vêtements chauds.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2 -->
-    <div class="tl-entry" style="animation-delay:.08s">
-      <div class="tl-dot ok-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">31 Mai 2011</span>
-          <span class="tl-badge badge-test">Radiologie</span>
-          <span class="tl-title-text">Radiographie thoracique — normale (4 mois)</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Prescripteur</label><p>Dr BENMAAMAR</p></div>
-          <div class="tl-field"><label>Radiologue</label><p>Dr Rachid GHOBSI (Centre d'Imagerie, Khemis Miliana)</p></div>
-          <div class="tl-field full"><label>Résultats</label><p>Absence d'anomalies de transparence parenchymateuses pulmonaires. Médiastin de morphologie habituelle. Cadre osseux normal. OK</p></div>
-        </div>
-        <button class="bilan-toggle" onclick="toggleBilan(this)">
-          <span class="clip-icon">📎</span>
-          <span class="toggle-label">Voir le document source</span>
-          <span class="toggle-arrow">▼</span>
-        </button>
-        <div class="bilan-drawer">
-          <div class="bilan-drawer-inner">
-            <div class="bilan-doc-header">
-              <span class="bilan-doc-badge">Document 1</span>
-              <span class="bilan-doc-title">Radiologie — Radiographie Thoracique</span>
-              <span class="bilan-doc-meta">31/05/2011 · Dr GHOBSI / Dr BENMAAMAR</span>
-            </div>
-            <div class="bilan-rows">
-              <div class="bilan-section-title">Informations du document</div>
-              <div class="bilan-row"><span class="bilan-row-label">Patient</span><span class="bilan-row-val">ESSAIDI YOUSEF</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Âge</span><span class="bilan-row-val">04 mois</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Médecin traitant</span><span class="bilan-row-val">Dr BENMAAMAR</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Radiologue</span><span class="bilan-row-val">Dr Rachid GHOBSI</span></div>
-              <div class="bilan-section-title">Résultats</div>
-              <div class="bilan-row"><span class="bilan-row-label">Parenchyme pulmonaire</span><span class="bilan-row-val val-ok">Absence d'anomalies de transparence</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Médiastin</span><span class="bilan-row-val val-ok">Morphologie habituelle</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Cadre osseux</span><span class="bilan-row-val val-ok">Normal</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 3 -->
-    <div class="tl-entry" style="animation-delay:.11s">
-      <div class="tl-dot active-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">25 Juin 2011</span>
-          <span class="tl-badge badge-active">Diagnostic — Officiel</span>
-          <span class="tl-title-text">Hypothyroïdie Congénitale confirmée — hospitalisation 20 jours</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Laboratoire</label><p>Dr Hachmi OULD ROUIS (Âge : 4 mois)</p></div>
-          <div class="tl-field"><label>Hospitalisation</label><p>20 jours avec complications intestinales ("ventre bouclé")</p></div>
-          <div class="tl-field"><label>Bilan hémato. (25/06/2011)</label><p>Hémoglobine : 8,6 g/dl (↓ norme 11–13). Hématocrite : 25,5% (↓). VGM : 73 fl. Lymphocytes : 63,8%. Plaquettes : 402 mille/mm³ (normale).</p></div>
-          <div class="tl-field"><label>Traitement initié</label><p>L-Thyroxine en gouttes (importées de France), puis en comprimés. Suivi initié au CMC Kouba — Pr. DJIDEL. Traitement À VIE.</p></div>
-        </div>
-        <button class="bilan-toggle" onclick="toggleBilan(this)">
-          <span class="clip-icon">📎</span>
-          <span class="toggle-label">Voir le document source</span>
-          <span class="toggle-arrow">▼</span>
-        </button>
-        <div class="bilan-drawer">
-          <div class="bilan-drawer-inner">
-            <div class="bilan-doc-header">
-              <span class="bilan-doc-badge">Document 2</span>
-              <span class="bilan-doc-title">Laboratoire — Hématologie</span>
-              <span class="bilan-doc-meta">25/06/2011 · Dr OULD ROUIS</span>
-            </div>
-            <div class="bilan-rows">
-              <div class="bilan-section-title">Informations du document</div>
-              <div class="bilan-row"><span class="bilan-row-label">Patient</span><span class="bilan-row-val">ESSAIDI Youcef</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Âge</span><span class="bilan-row-val">4 mois</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Directeur labo</span><span class="bilan-row-val">Dr Hachmi OULD ROUIS</span></div>
-              <div class="bilan-section-title">Numération Formule Sanguine</div>
-              <div class="bilan-row"><span class="bilan-row-label">Globules Blancs</span><span class="bilan-row-val val-ok">10,3 mille/mm³</span><span class="bilan-row-norm">N: 6–15</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Globules Rouges</span><span class="bilan-row-val val-low">3,51 millions/mm³</span><span class="bilan-row-norm">N: 3,7–4,8</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Hémoglobine</span><span class="bilan-row-val val-low">8,6 g/dl</span><span class="bilan-row-norm">N: 11–13</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Hématocrite</span><span class="bilan-row-val val-low">25,5 %</span><span class="bilan-row-norm">N: 33–39</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">VGM</span><span class="bilan-row-val val-ok">73 fl</span><span class="bilan-row-norm">N: 70–86</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">TGMH</span><span class="bilan-row-val val-ok">24,6 pg</span><span class="bilan-row-norm">N: 24–30</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">CCMH</span><span class="bilan-row-val val-ok">33,9 g/dl</span><span class="bilan-row-norm">N: 32–36</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Plaquettes</span><span class="bilan-row-val val-ok">402 mille/mm³</span><span class="bilan-row-norm">N: 150–450</span></div>
-              <div class="bilan-section-title">Formule Leucocytaire</div>
-              <div class="bilan-row"><span class="bilan-row-label">Neutrophiles</span><span class="bilan-row-val">28,5 %</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Lymphocytes</span><span class="bilan-row-val">63,8 %</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Monocytes</span><span class="bilan-row-val">4,4 %</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Éosinophiles</span><span class="bilan-row-val">2,3 %</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Basophiles</span><span class="bilan-row-val">1 %</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 4 -->
-    <div class="tl-entry" style="animation-delay:.14s">
+    <!-- 1 (reversed) -->
+    <div class="tl-entry" style="animation-delay:.80s">
       <div class="tl-dot warn-dot"></div>
       <div class="tl-card">
         <div class="tl-top">
-          <span class="tl-year">Fin 2011</span>
-          <span class="tl-badge badge-episode">Urgence Neurologique</span>
-          <span class="tl-title-text">Crise convulsive fébrile — arrêt par Valium IV</span>
+          <span class="tl-year">13 Mai 2026</span>
+          <span class="tl-badge badge-specialist">Endocrinologie — Consultation</span>
+          <span class="tl-title-text">Dr BOUHEDDA Rédha — TSH 19,25 · Augmentation Levothyrox 225 µg · Vit D IM · Suspicion HTIC · Référence Prof. Azzouz (Bainem)</span>
         </div>
         <div class="tl-details">
-          <div class="tl-field"><label>Lieu</label><p>Urgences UMC (vers 6–9 mois)</p></div>
-          <div class="tl-field"><label>Fièvre rapportée</label><p>45°C (selon le médecin généraliste)</p></div>
-          <div class="tl-field"><label>Sémiologie</label><p>Arrêt des mouvements ("t'affissa"), tête rigide et lourde penchée sur le côté, yeux révulsés (blancs), pleurs étouffés.</p></div>
-          <div class="tl-field"><label>Traitement</label><p>Diazépam (Valium) en injection — crise stoppée avec succès.</p></div>
+          <div class="tl-field"><label>Médecin</label><p>Dr BOUHEDDA Rédha — Spécialiste Endocrinologie-Diabétologie, Khemis Miliana</p></div>
+          <div class="tl-field"><label>! Décision Thérapeutique — Levothyrox</label><p>Augmentation de la dose à <span class="val-high"><strong>225 µg/jour</strong></span>
+ (mesure temporaire, en attendant la prise en charge spécialisée).
+Hypothèse : malabsorption par barrière gastrique (gastrite auto-immune)
+plutôt qu'inadéquation posologique.</p></div>
+          <div class="tl-field"><label>! Décision Thérapeutique — Vitamine D</label><p>Prescription de <strong>Vitamine D Intramusculaire (IM)</strong> pour contourner la malabsorption digestive. Vit D = 23,6 ng/ml — insuffisante malgré amélioration.</p></div>
+          <div class="tl-field"><label>Hypothèse diagnostique — Céphalées</label><p>Suspicion de <strong>Hypertension Intracrânienne Bénigne (HTIC Bénigne)</strong>
+ comme complication secondaire de l'hypothyroïdie chroniquement
+déséquilibrée. L'absence d'œdème papillaire est jugée atypique mais non
+éliminatoire.</p></div>
+          <div class="tl-field"><label>Évaluation antidouleur</label><p>AINS oraux forts refusés en raison de la gastrite active. Prise en charge de la douleur limitée au Paracétamol.</p></div>
+          <div class="tl-field full"><label>! Référence urgente — Hôpital Bainem (Prof. Azzouz)</label><p>Demande de <strong>courrier d'hospitalisation formel adressé au Prof. Azzouz (Hôpital Bainem)</strong>.
+ Dr BOUHEDDA qualifie le cas de "pas logique" — profil clinique hors
+norme justifiant une intervention de niveau académique. Il prévoit
+également de solliciter l'avis de professeurs seniors. Consultation
+endocrinologique spécialisée et neurologique requises en urgence.</p></div>
+        </div>
+      </div>
+    </div>
+    <!-- 2 (reversed) -->
+    <div class="tl-entry" style="animation-delay:.785s">
+      <div class="tl-dot warn-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">13 Mai 2026</span>
+          <span class="tl-badge badge-test">Labo — Bilan Complet (Houtilab)</span>
+          <span class="tl-title-text">Dr HOUTI — TSH 19,25 (↑↑) · Vit D 23,6 (Insuffisante) · Axe hypophysaire : PTH / Cortisol / ACTH / IGF-1 dans les normes</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Laboratoire</label><p>Houtilab / Dr. HOUTI Noureddine — Médecin Biologiste — Khemis Miliana</p></div>
+          <div class="tl-field"><label>! TSH 3ème Génération</label><p><span class="val-high">19,250 µUI/ml</span>
+ (N: 0,53–4,53 ≤18 ans). Sévèrement élevée malgré 200 µg de Levothyrox.
+Contraste frappant avec la valeur normale du 29/01/2026 (4,240).
+Confirme une hypothyroïdie déséquilibrée majeure.</p></div>
+          <div class="tl-field"><label>Vitamine D-25 OH</label><p><span class="val-low">23,6 ng/ml</span>
+ (N: 30–100). Insuffisante — bien que significativement améliorée vs
+Jan. 2026 (8 ng/ml). Supplémentation IM prescrite par Dr BOUHEDDA.</p></div>
+          <div class="tl-field"><label>Biochimie</label><p>Protéines totales : <span class="val-ok">67,09 g/l</span> (N: 60–78). Calcémie : <span class="val-ok">95,21 mg/l</span> (N: 86–103). Phosphorémie : <span class="val-ok">49,68 mg/l</span> (N enfant: 40–60). — Toutes normales.</p></div>
+          <div class="tl-field"><label>Axe gonadotrope</label><p>FSH : <span class="val-ok">4,02 mUI/ml</span> (N: 0,95–11,95). LH : <span class="val-ok">7,07 UI/l</span> (N: 1,7–8,6). Testostérone : <span class="val-ok">5,27 ng/ml</span> (N: 2,8–8,0). — Axe gonadotrope normal. Puberté en cours, cohérente avec l'âge.</p></div>
+          <div class="tl-field"><label>Prolactine</label><p><span class="val-ok">16,93 ng/ml</span> (N: 4,6–21,4 Male). — Normale.</p></div>
+          <div class="tl-field"><label>Axe corticotrope</label><p>Cortisol sanguin : <span class="val-ok">372,6 nmol/l</span> (N: 145,4–619,4). ACTH : <span class="val-ok">46,4 pg/ml</span> (N: 7,2–63,3). — Axe corticosurrénalien intact.</p></div>
+          <div class="tl-field"><label>PTH</label><p><span class="val-ok">29,81 pg/ml</span> (N: 15–68,3). — Normale, cohérente avec la calcémie normale.</p></div>
+          <div class="tl-field full"><label>! IGF-1 (Somatomédine C)</label><p><span class="val-ok">274 ng/ml</span>
+ (N: 120–501 ≤17 ans). — Normale. Rassurante : absence d'insuffisance
+somatotrope évidente malgré l'hypotrophie hypophysaire. À interpréter en
+ contexte clinique.</p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Houtilab</span>
+              <span class="bilan-doc-title">Bilan Biologique Complet — Dr. HOUTI Noureddine</span>
+              <span class="bilan-doc-meta">13/05/2026 · Khemis Miliana</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-section-title">Biochimie</div>
+              <div class="bilan-row"><span class="bilan-row-label">Protéines totales</span><span class="bilan-row-val val-ok">67,09 g/l</span><span class="bilan-row-norm">N: 60–78</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Calcémie</span><span class="bilan-row-val val-ok">95,21 mg/l</span><span class="bilan-row-norm">N: 86–103</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Phosphorémie</span><span class="bilan-row-val val-ok">49,68 mg/l</span><span class="bilan-row-norm">N enfant: 40–60</span></div>
+              <div class="bilan-section-title">Sérologie</div>
+              <div class="bilan-row"><span class="bilan-row-label">Vitamine D-25 OH</span><span class="bilan-row-val val-low">23,6 ng/ml</span><span class="bilan-row-norm">N: 30–100</span></div>
+              <div class="bilan-section-title">Hormonologie</div>
+              <div class="bilan-row"><span class="bilan-row-label">TSH 3ème Génération</span><span class="bilan-row-val val-high">19,250 µUI/ml</span><span class="bilan-row-norm">N: 0,53–4,53 (≤18 ans)</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">FSH</span><span class="bilan-row-val val-ok">4,02 mUI/ml</span><span class="bilan-row-norm">N: 0,95–11,95 (Masc.)</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">LH</span><span class="bilan-row-val val-ok">7,07 UI/l</span><span class="bilan-row-norm">N: 1,7–8,6 (Masc.)</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Prolactine</span><span class="bilan-row-val val-ok">16,93 ng/ml</span><span class="bilan-row-norm">N: 4,6–21,4 (Masc.)</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Testostérone</span><span class="bilan-row-val val-ok">5,27 ng/ml</span><span class="bilan-row-norm">N: 2,8–8,0 (Masc.)</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Cortisol sanguin</span><span class="bilan-row-val val-ok">372,6 nmol/l</span><span class="bilan-row-norm">N: 145,4–619,4</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">PTH</span><span class="bilan-row-val val-ok">29,81 pg/ml</span><span class="bilan-row-norm">N: 15–68,3</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">ACTH</span><span class="bilan-row-val val-ok">46,4 pg/ml</span><span class="bilan-row-norm">N: 7,2–63,3</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">IGF-1 (Somatomédine C)</span><span class="bilan-row-val val-ok">274 ng/ml</span><span class="bilan-row-norm">N: 120–501 (≤17 ans)</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3 (reversed) -->
+    <div class="tl-entry" style="animation-delay:.77s">
+      <div class="tl-dot ok-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">13 Mai 2026</span>
+          <span class="tl-badge badge-test">Ophtalmologie — Compte Rendu</span>
+          <span class="tl-title-text">Dr NOUIOUA Inès — Acuité visuelle 10/10 ODG · Tonus oculaire normal · Fond d'œil normal bilatéral</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Dr NOUIOUA Inès — Chirurgien Ophtalmologiste · Clinique d'Ophtalmologie Nouioua, Khemis Miliana, Aïn Defla</p></div>
+          <div class="tl-field"><label>Contexte</label><p>Compte rendu
+adressé au Dr BOUHEDDA Rédha (Endocrinologue) — suite au courrier de
+référence du 12/05/2026 (Document 1000007905). Antécédents mentionnés :
+hypotrophie et troubles hypothalamo-hypophysaires.</p></div>
+          <div class="tl-field"><label>Acuité visuelle (sans correction)</label><p>Œil droit (OD) : <span class="val-ok">10/10</span> · Œil gauche (OG) : <span class="val-ok">10/10</span></p></div>
+          <div class="tl-field"><label>Lampe à fente</label><p>OD : <span class="val-ok">RAS</span> · OG : <span class="val-ok">RAS</span> — aucune anomalie du segment antérieur.</p></div>
+          <div class="tl-field"><label>Tonus oculaire</label><p>OD : <span class="val-ok">12 mmHg</span> · OG : <span class="val-ok">12 mmHg</span> — normal (norme 10–21 mmHg).</p></div>
+          <div class="tl-field"><label>Fond d'œil (FO)</label><p>OD : <span class="val-ok">Normal</span> · OG : <span class="val-ok">Normal</span> — <strong>pas d'œdème papillaire, pas d'atrophie optique, pas de signe de compression chiasmatique.</strong></p></div>
+          <div class="tl-field full"><label>! Signification clinique — Mise en perspective</label><p>Ce bilan ophtalmologique complet est <span class="val-ok">entièrement normal</span>.
+ Combiné au fond d'œil de Dr MISRAOUI (10/05/2026 — sans anomalie,
+acuité OD 8/10), il confirme l'absence de retentissement visuel
+objectivable de l'atrophie hypophysaire à ce stade. <strong>L'acuité OD est maintenant 10/10</strong>
+ (contre 8/10 trois jours plus tôt chez Dr MISRAOUI) — la différence est
+ probablement liée aux conditions d'examen ou à une variabilité
+intra-individuelle sans signification pathologique. Pas de signe de
+compression du chiasma optique ni d'hypertension intracrânienne.</p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Document 1000007920</span>
+              <span class="bilan-doc-title">Compte Rendu Ophtalmologique — Dr NOUIOUA Inès (Chirurgien Ophtalmologiste)</span>
+              <span class="bilan-doc-meta">13/05/2026 · Clinique Nouioua · Khemis Miliana, Aïn Defla</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-section-title">Informations</div>
+              <div class="bilan-row"><span class="bilan-row-label">Médecin</span><span class="bilan-row-val">Dr NOUIOUA Inès</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Patient</span><span class="bilan-row-val">ESSAIDI Youcef · 15 ans · 03/02/2011</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Antécédents notés</span><span class="bilan-row-val">Hypotrophie + troubles hypophyso-hypophysaires</span></div>
+              <div class="bilan-section-title">Acuité Visuelle (sans correction)</div>
+              <div class="bilan-row"><span class="bilan-row-label">Œil Droit (OD)</span><span class="bilan-row-val val-ok">10/10</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Œil Gauche (OG)</span><span class="bilan-row-val val-ok">10/10</span></div>
+              <div class="bilan-section-title">Lampe à Fente</div>
+              <div class="bilan-row"><span class="bilan-row-label">OD</span><span class="bilan-row-val val-ok">RAS</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">OG</span><span class="bilan-row-val val-ok">RAS</span></div>
+              <div class="bilan-section-title">Tonus Oculaire</div>
+              <div class="bilan-row"><span class="bilan-row-label">OD</span><span class="bilan-row-val val-ok">12 mmHg</span><span class="bilan-row-norm">N: 10–21</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">OG</span><span class="bilan-row-val val-ok">12 mmHg</span><span class="bilan-row-norm">N: 10–21</span></div>
+              <div class="bilan-section-title">Fond d'Œil</div>
+              <div class="bilan-row"><span class="bilan-row-label">OD</span><span class="bilan-row-val val-ok">Normal</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">OG</span><span class="bilan-row-val val-ok">Normal</span></div>
+              <div class="bilan-conclusion"><strong>Conclusion :</strong>
+ Bilan ophtalmologique complet normal. Pas d'œdème papillaire, pas
+d'atrophie optique, pas de signe de compression chiasmatique. Acuité
+visuelle 10/10 ODG. Tonus oculaire normal. Fond d'œil normal bilatéral.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4 (reversed) -->
+    <div class="tl-entry" style="animation-delay:.74s">
+      <div class="tl-dot active-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">12 Mai 2026</span>
+          <span class="tl-badge badge-specialist">Endocrinologie — Courrier Ophtalmologie</span>
+          <span class="tl-title-text">Dr BOUHEDDA Rédha — Courrier
+confrère : acuité visuelle + fond d'œil dans le cadre du bilan de
+retentissement de l'atrophie hypophysaire</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Dr BOUHEDDA Rédha — Diabétologie-Endocrinologie, Khemis Miliana</p></div>
+          <div class="tl-field"><label>Destinataire</label><p>Confrère ophtalmologiste (courrier de référence)</p></div>
+          <div class="tl-field"><label>Examens demandés</label><p>Examen de l'acuité visuelle · Examen du fond d'œil</p></div>
+          <div class="tl-field full"><label>Motif — Texte manuscrit</label><p>"Cher confrère, je vous adresse pour un examen de l'acuité visuelle et examen du fond d'œil dans le cadre du <strong>bilan de retentissement de son atrophie hypophysaire</strong>."</p></div>
+          <div class="tl-field full"><label>Signification clinique</label><p>Ce
+ courrier, émis le même jour que la prescription du bilan hormonal
+complet (Document 1000007899), formalise la démarche de bilan de
+retentissement de l'atrophie hypophysaire confirmée par l'Angio-IRM
+(11/05/2026). L'ophtalmologie est sollicitée pour évaluer un éventuel
+retentissement visuel (voies optiques, champ visuel, fond d'œil) lié à
+la pathologie hypophysaire. Réponse reçue le 13/05/2026 par Dr NOUIOUA
+Inès — voir entrée suivante.</p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Document 1000007905</span>
+              <span class="bilan-doc-title">Courrier de référence — Ophtalmologie · Dr BOUHEDDA Rédha (Endocrinologue)</span>
+              <span class="bilan-doc-meta">12/05/2026 · N°13 Cité EPLF, Khemis Miliana, W. Aïn Defla</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-row"><span class="bilan-row-label">Médecin</span><span class="bilan-row-val">Dr BOUHEDDA Rédha · N° Ordre : 4335</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Spécialité</span><span class="bilan-row-val">Diabétologie-Endocrinologie</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Patient</span><span class="bilan-row-val">ESSAIDI Youcef · 15 ans · 03/02/2011</span></div>
+              <div class="bilan-section-title">Demande</div>
+              <div class="bilan-row"><span class="bilan-row-label">Diagnostic cité</span><span class="bilan-row-val val-high">Atrophie hypophysaire</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Examen 1</span><span class="bilan-row-val">Acuité visuelle</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Examen 2</span><span class="bilan-row-val">Fond d'œil (FO)</span></div>
+              <div class="bilan-conclusion"><strong>Texte :</strong>
+"Cher confrère, je vous adresse pour un examen de l'acuité visuelle et
+examen du fond d'œil dans le cadre du bilan de retentissement de son
+atrophie hypophysaire."</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
     <!-- 5 -->
+    <div class="tl-entry" style="animation-delay:.71s">
+      <div class="tl-dot active-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">12 Mai 2026</span>
+          <span class="tl-badge badge-test">Endocrinologie — Prescription Biologique</span>
+          <span class="tl-title-text">Dr BOUHEDDA Rédha — Bilan
+thyroïdien &amp; hormonal complet prescrit (TSH, PTH, FSH, LH,
+Prolactine, Cortisol, ACTH, Testostérone, Vit. D, IGF1…)</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Dr BOUHEDDA Rédha — Diabétologie-Endocrinologie, Khemis Miliana</p></div>
+          <div class="tl-field"><label>Examens prescrits — Bilan thyroïdien</label><p>TSH · Calcémie · Phosphorémie · Taux de Protides · PTH (Parathormone)</p></div>
+          <div class="tl-field"><label>Examens prescrits — Axe hypophysaire</label><p><span class="val-high">FSH · LH · Prolactine · Cortisol · ACTH · Testostérone</span></p></div>
+          <div class="tl-field"><label>Examens complémentaires</label><p><span class="val-high">Vitamine D · IGF-1 (Facteur de Croissance)</span></p></div>
+          <div class="tl-field full"><label>Signification clinique</label><p>Bilan
+ capital pour confronter les données biologiques à l'hypotrophie
+hypophysaire confirmée par l'Angio-IRM (11/05/2026). Le dosage de FSH,
+LH, Prolactine, Cortisol, ACTH et Testostérone explorera l'intégrité
+fonctionnelle de l'axe hypothalamo-hypophysaire. L'IGF-1 évaluera l'axe
+somatotrope (GH). Résultats en attente.</p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Document 1000007899</span>
+              <span class="bilan-doc-title">Prescription d'examens biologiques — Dr BOUHEDDA Rédha (Endocrinologue)</span>
+              <span class="bilan-doc-meta">12/05/2026 · Khemis Miliana, W. Aïn Defla</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-row"><span class="bilan-row-label">Médecin</span><span class="bilan-row-val">Dr BOUHEDDA Rédha · N° Ordre : 4335</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Patient</span><span class="bilan-row-val">ESSAIDI Youcef · 15 ans · 03/02/2011</span></div>
+              <div class="bilan-section-title">Bilan Thyroïdien</div>
+              <div class="bilan-row"><span class="bilan-row-label">TSH</span><span class="bilan-row-val">En attente</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Calcémie</span><span class="bilan-row-val">En attente</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Phosphorémie</span><span class="bilan-row-val">En attente</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Taux de Protides</span><span class="bilan-row-val">En attente</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">PTH (Parathormone)</span><span class="bilan-row-val">En attente</span></div>
+              <div class="bilan-section-title">Bilan Hormonal — Axe Hypophysaire !</div>
+              <div class="bilan-row"><span class="bilan-row-label">FSH</span><span class="bilan-row-val">En attente</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">LH</span><span class="bilan-row-val">En attente</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Prolactine</span><span class="bilan-row-val">En attente</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Cortisol</span><span class="bilan-row-val">En attente</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">ACTH</span><span class="bilan-row-val">En attente</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Testostérone</span><span class="bilan-row-val">En attente</span></div>
+              <div class="bilan-section-title">Examens Complémentaires</div>
+              <div class="bilan-row"><span class="bilan-row-label">Vitamine D</span><span class="bilan-row-val">En attente</span><span class="bilan-row-norm">Dernière valeur : 20,3 ng/ml (2021 — insuffisante)</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">IGF-1 (Facteur de Croissance)</span><span class="bilan-row-val">En attente</span><span class="bilan-row-norm">Axe somatotrope (GH)</span></div>
+              <div class="bilan-conclusion"><strong>Résultats en attente.</strong> Essentiels pour évaluer l'intégrité fonctionnelle de l'axe hypothalamo-hypophysaire.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 6 -->
+    <div class="tl-entry" style="animation-delay:.695s">
+      <div class="tl-dot active-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">12 Mai 2026</span>
+          <span class="tl-badge badge-specialist">Neurologie — Orientation</span>
+          <span class="tl-title-text">Dr Sennia Imane Amel — Courrier d'orientation médicale spécialisée</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Dr Sennia Imane Amel (Épouse TAANE) — Neurologie, Khemis Miliana</p></div>
+          <div class="tl-field"><label>Observations cliniques</label><p>Hypothyroïdie congénitale · Gastrite · Céphalées en casque (type tension).</p></div>
+          <div class="tl-field"><label>Résultats d'examens joints</label><p>Fond d'œil : sans anomalie. Angio-IRM cérébrale : <span class="val-high">légère atrophie hypophysaire</span> confirmée.</p></div>
+          <div class="tl-field full"><label>Signification clinique</label><p>Ce
+ courrier formalise le parcours de soin. Il consolide la nécessité d'une
+ évaluation endocrinologique spécialisée pour confronter les données
+hormonales à l'hypotrophie hypophysaire objectivée.</p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Document 1000007895</span>
+              <span class="bilan-doc-title">Courrier d'orientation médicale — Dr Sennia Imane Amel (Neurologue)</span>
+              <span class="bilan-doc-meta">12/05/2026 · Khemis Miliana, W. Aïn Defla</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-row"><span class="bilan-row-label">Médecin</span><span class="bilan-row-val">Dr Sennia Imane Amel (Épouse TAANE)</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">N° Ordre</span><span class="bilan-row-val">44/536</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Patient</span><span class="bilan-row-val">ESSAIDI Youcef · 15 ans · 03/02/2011</span></div>
+              <div class="bilan-section-title">Observations cliniques</div>
+              <div class="bilan-row"><span class="bilan-row-label">Hypothyroïdie congénitale</span><span class="bilan-row-val val-high">Confirmée</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Gastrite</span><span class="bilan-row-val val-high">Confirmée</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Céphalées en casque</span><span class="bilan-row-val val-high">Type tension — persistantes</span></div>
+              <div class="bilan-section-title">Résultats d'examens</div>
+              <div class="bilan-row"><span class="bilan-row-label">Fond d'œil (FO)</span><span class="bilan-row-val val-ok">Sans anomalie</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Angio-IRM cérébrale</span><span class="bilan-row-val val-high">Légère atrophie hypophysaire</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 7 -->
+    <div class="tl-entry" style="animation-delay:.68s">
+      <div class="tl-dot amber-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">11 Mai 2026</span>
+          <span class="tl-badge badge-test">CHU Blida — Immunologie</span>
+          <span class="tl-title-text">Dr H. ROUAGHI — Bilan auto-immun complet : TS + EDP · Synthèse clinique multi-systémique</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Dr H. ROUAGHI — Immunologie Médicale, CHU Blida</p></div>
+          <div class="tl-field"><label>Prélèvement</label><p>Bon de réception confirmé — prélèvement sanguin 11/05/2026 au CHU de Blida (N° quittance 32250).</p></div>
+          <div class="tl-field"><label>Examens prescrits</label><p><strong>TS</strong> (Tests de Spécificité auto-immune) et <strong>EDP</strong> (Électrophorèse Des Protéines).</p></div>
+          <div class="tl-field full"><label>Signification clinique</label><p>Ces
+ analyses complètent le bilan auto-immun initié par Dr Hamraoui
+(Anti-TPO / Anti-TG, 10/05/2026). L'EDP permettra de détecter
+d'éventuelles anomalies des protéines sériques. Résultats en attente.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 8 -->
+    <div class="tl-entry" style="animation-delay:.665s">
+      <div class="tl-dot warn-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">11 Mai 2026</span>
+          <span class="tl-badge badge-test">Angio-IRM Cérébrale — Résultat</span>
+          <span class="tl-title-text">Dr LEKHAL M. — Légère hypotrophie hypophysaire · Pas d'HTIC · Vascularisation cérébrale normale</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Centre</label><p>Centre d'Imagerie Médicale Dr. Lekhal M.</p></div>
+          <div class="tl-field"><label>Technique</label><p>Séquences IRM standard + Angio-MR 3D TOF + séquences 3D T1 avec injection de gadolinium, centrées sur la glande hypophyse.</p></div>
+          <div class="tl-field"><label>Système vasculaire — Artères</label><p><span class="val-ok">Normal.</span> Axes cervicaux perméables. Polygone de Willis sans anomalie.</p></div>
+          <div class="tl-field"><label>Système vasculaire — Veines &amp; Sinus</label><p><span class="val-ok">Normal.</span> Pas de thrombose.</p></div>
+          <div class="tl-field"><label>Parenchyme cérébral</label><p><span class="val-ok">Normal.</span> Système ventriculaire non dilaté. Pas de déplacement de la ligne médiane.</p></div>
+          <div class="tl-field"><label>! Glande hypophyse — Constatation principale</label><p>Hauteur mesurée entre <span class="val-high">4 mm et 4,5 mm</span> — <strong>légèrement réduite</strong> (norme : 6 à 7 mm). Tige pituitaire en place. Sinus caverneux libres. <strong>Légère hypotrophie hypophysaire.</strong></p></div>
+          <div class="tl-field"><label>Pression intracrânienne</label><p><span class="val-ok">Pas de signe d'HTIC.</span></p></div>
+          <div class="tl-field full"><label>! Recommandation du radiologue</label><p><strong>Confrontation clinique avec les données hormonales indispensable.</strong> L'hypotrophie hypophysaire peut être à l'origine d'une <strong>hypothyroïdie d'origine centrale (secondaire)</strong> — hypothèse déjà soulevée dès 2014. Consultation endocrinologique spécialisée requise en urgence.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 9 -->
+    <div class="tl-entry" style="animation-delay:.65s">
+      <div class="tl-dot amber-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">10 Mai 2026</span>
+          <span class="tl-badge badge-specialist">Immunologie — Gastrite Auto-Immune</span>
+          <span class="tl-title-text">Dr Hamraoui — Anticorps thyroïdiens + gastrite auto-immune distincte de l'H. pylori + rôle du stress (BEM)</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Dr Hamraoui — Immunologie, Faculté de Blida</p></div>
+          <div class="tl-field"><label>Bilan immunologique prescrit</label><p>Prélèvement sur tube sec : <span class="val-high">Anti-TPO</span> et <span class="val-high">Anti-TG</span> — pour caractériser la composante auto-immune thyroïdienne.</p></div>
+          <div class="tl-field"><label>Facteur déclenchant — Stress BEM</label><p>Stress extrême (maladie chronique + charge scolaire BEM) susceptible de déclencher ou d'exacerber des poussées auto-immunes.</p></div>
+          <div class="tl-field full"><label>! Clarification diagnostique majeure — Gastrite Auto-Immune vs H. pylori</label><p>Le Dr Hamraoui précise que le patient présente très probablement une <strong>gastrite auto-immune</strong>
+ (Ac anti-cellules pariétales positifs depuis 2021, absence de facteur
+intrinsèque), pathologie fondamentalement différente de l'infection à H.
+ pylori. Ce diagnostic est maintenant confirmé par l'histologie négative
+ H. pylori (Dr Boucebha, 09/11/2025).</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 10 -->
+    <div class="tl-entry" style="animation-delay:.635s">
+      <div class="tl-dot ok-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">10 Mai 2026</span>
+          <span class="tl-badge badge-test">Ophtalmologie — Résultat</span>
+          <span class="tl-title-text">Dr A. MISRAOUI — Fond d'œil bilatéral sans anomalie · Pas d'œdème papillaire</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Dr A. MISRAOUI — Ophtalmologie, Khemis Miliana</p></div>
+          <div class="tl-field"><label>Acuité visuelle</label><p>Œil droit (OD) : <span class="val-low">8/10</span> · Œil gauche (OG) : <span class="val-ok">10/10</span></p></div>
+          <div class="tl-field"><label>Fond d'œil (FO ODG)</label><p><span class="val-ok">Sans anomalies.</span> <strong>Pas d'œdème papillaire</strong> observé ce jour — signe direct d'HTIC absent à ce stade.</p></div>
+          <div class="tl-field full"><label>Interprétation clinique</label><p>L'absence
+ d'œdème papillaire ce jour n'exclut pas formellement une HTIC débutante
+ ou intermittente. L'Angio-IRM reste indispensable. L'acuité visuelle
+légèrement réduite à droite (8/10) mérite suivi.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 11 -->
+    <div class="tl-entry" style="animation-delay:.62s">
+      <div class="tl-dot warn-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">10 Mai 2026</span>
+          <span class="tl-badge badge-specialist">Neurologie — Orientations Urgentes</span>
+          <span class="tl-title-text">Dr Sennia Imane Amel — Céphalées en casque rebelles + flou visuel bilatéral → Angio-IRM + Fond d'œil prescrits</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Dr Sennia Imane Amel — Neurologie, Khemis Miliana</p></div>
+          <div class="tl-field"><label>Contexte clinique</label><p>Hypothyroïdie congénitale. Céphalées en casque rebelles + flou visuel bilatéral.</p></div>
+          <div class="tl-field"><label>Prescription 1 — Imagerie</label><p><strong>Angio-IRM cérébrale</strong> avec <strong>séquence hypophysaire</strong>.</p></div>
+          <div class="tl-field"><label>Prescription 2 — Ophtalmologie</label><p><strong>Fond d'œil (FO)</strong> — réalisé le jour même (10/05/2026, Dr MISRAOUI).</p></div>
+          <div class="tl-field"><label>Prescription antalgique</label><p>Paracétamol 1000 mg. Antalgiques palier 2 <strong>refusés</strong> — risque gastrique contre-indiqué.</p></div>
+          <div class="tl-field full"><label>Statut des investigations</label><p>Fond
+ d'œil réalisé le 10/05/2026 (Dr MISRAOUI) — sans anomalie, pas d'œdème
+papillaire. Angio-IRM cérébrale réalisée le 11/05/2026 (Dr LEKHAL) —
+légère hypotrophie hypophysaire confirmée.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 12 -->
+    <div class="tl-entry" style="animation-delay:.59s">
+      <div class="tl-dot warn-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">28 Avr. 2026</span>
+          <span class="tl-badge badge-specialist">ORL — Conclusion Urgente</span>
+          <span class="tl-title-text">Naso-pharyngo-laryngoscopie — hypertrophie cornets + RGO + scanner cérébral demandé</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Dr Ayouche M.A. — ORL, Khemis Miliana</p></div>
+          <div class="tl-field"><label>Acte ORL réalisé</label><p>Retrait
+ d'un bouchon de cérumen dans l'oreille gauche → perte auditive et
+douleurs résolues. Tympans intacts, légère calcification mineure.</p></div>
+          <div class="tl-field"><label>Fosses nasales</label><p><strong>Hypertrophie obstructive des cornets inférieurs (++++)</strong>. Pied de cloison nasale bilatéral. Muqueuse congestive.</p></div>
+          <div class="tl-field"><label>Larynx / RGO</label><p><strong>Aryténoïdes rouges (++) — signe clinique indirect d'un Reflux Gastro-Œsophagien</strong>. Cordes vocales saines et mobiles. Épiglotte normale.</p></div>
+          <div class="tl-field"><label>Traitement ORL (7 jours)</label><p>Essai pour réduire l'inflammation nasale. <span class="val-high">Échec total.</span> Cautérisation des cornets évoquée.</p></div>
+          <div class="tl-field full"><label>! Conclusion Finale Dr Ayouche — Scanner Cérébral URGENT</label><p>Devant
+ l'échec des antalgiques, les troubles visuels, la
+photophobie/phonophobie et l'historique endocrinien complexe, le Dr
+Ayouche insiste : <strong>Scanner cérébral (TDM) urgent avec ciblage spécifique de la glande pituitaire</strong> — pour écarter un processus expansif (ex : adénome hypophysaire).</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 13 -->
+    <div class="tl-entry" style="animation-delay:.56s">
+      <div class="tl-dot warn-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">Avr. 2026 — Actuel</span>
+          <span class="tl-badge badge-episode">Crise Active — Urgente</span>
+          <span class="tl-title-text">Céphalées sévères quotidiennes + photophobie + phonophobie + troubles visuels</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Céphalées</label><p>Continues 24h/24 depuis avril 2026. Insensibles au Paracétamol (Doliprane). Fluctuent en intensité mais présentes jour et nuit.</p></div>
+          <div class="tl-field"><label>Troubles visuels</label><p>Vision
+ floue intermittente. Taches blanches/grisâtres. Écriture qui paraît
+soudainement très petite. Nécessite changement de position et
+d'éclairage pour retrouver la netteté.</p></div>
+          <div class="tl-field"><label>Photophobie</label><p>Extrême — ne supporte aucune lumière, demande l'obscurité totale.</p></div>
+          <div class="tl-field"><label>Phonophobie</label><p>Extrême — ne supporte aucun bruit : voix, motos, même le chant des oiseaux.</p></div>
+          <div class="tl-field"><label>Troubles mnésiques</label><p>Oublis fréquents et rapides. Distraction facile, concentration difficile à maintenir.</p></div>
+          <div class="tl-field"><label>Troubles comportementaux</label><p>Irritabilité
+ marquée et colère fréquente (état quasi-permanent). Comportement
+régressif — agit encore comme un enfant en bas âge malgré ses 15 ans.
+Non évalués par un spécialiste à ce jour.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 14 (reversed) -->
+    <div class="tl-entry" style="animation-delay:.545s">
+      <div class="tl-dot ok-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">29 Jan. 2026</span>
+          <span class="tl-badge badge-test">Labo — Hormonologie (Houtilab)</span>
+          <span class="tl-title-text">TSH 4,240 µUI/ml — Dans la norme · Éphémère équilibre sous 200 µg Levothyrox</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Laboratoire</label><p>Houtilab / Dr. HOUTI Noureddine — Khemis Miliana · Technique ELFA Biomerieux Mini vidas</p></div>
+          <div class="tl-field"><label>! Résultat TSH</label><p><span class="val-ok"><strong>4,240 µUI/ml</strong></span>
+ (N ≤18 ans: 0,53–4,53). TSH dans les limites normales — premier
+contrôle documenté sous Levothyrox 200 µg (depuis 02/11/2025). Résultat
+rassurisant à court terme.</p></div>
+          <div class="tl-field full"><label>Mise en perspective</label><p>Cette valeur normale contraste fortement avec la TSH de <span class="val-high">19,250 µUI/ml</span>
+ obtenue 3,5 mois plus tard (13/05/2026). L'équilibre thyroïdien sous
+200 µg s'est avéré transitoire — soulignant l'instabilité persistante et
+ la probable malabsorption comme facteur limitant.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 15 -->
+    <div class="tl-entry" style="animation-delay:.53s">
+      <div class="tl-dot warn-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">Fin 2025 – Début 2026</span>
+          <span class="tl-badge badge-episode">Gastro-entérologie</span>
+          <span class="tl-title-text">Deux diagnostics contradictoires — H. pylori (biopsie +) vs trouble colique · Histologie finalement H. pylori négatif</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Piste 1 — Dr BOUHEDDA / Clinique Mitidja, Blida</label><p>FOGD avec biopsie gastrique → <strong>Helicobacter pylori + gastrite</strong> confirmés à l'endoscopie initiale. Traitement antibiotique de 14 jours administré → <span class="val-high">aggravation des douleurs corporelles et céphalées.</span></p></div>
+          <div class="tl-field"><label>! Résultat ANAPATH (Dr Boucebha, 09/11/2025)</label><p>Histologie formelle : <span class="val-ok"><strong>H. pylori négatif sur biopsies.</strong></span> Pan-gastrite chronique modérée sans atrophie vraie. Confirme la composante auto-immune — valide l'échec de l'antibiothérapie.</p></div>
+          <div class="tl-field"><label>Piste 2 — Pr. Abdelghani YAGOUBI (Gastro-pédiatrie)</label><p>Suivi
+ gastro-pédiatrique — FOGD (Dr Hassen Khodja, 05/11/2025). Prescription
+Forlax progressive (26/11/2025 : 3,5 sachets/j → 25/01/2026 : 4
+sachets/j pendant 3 mois).</p></div>
+          <div class="tl-field full"><label>! Régime alimentaire imposé (ancienne piste)</label><p>Interdiction totale : <strong>bananes, chocolat, riz, carottes</strong> — non validée par les autres spécialistes du dossier. À réévaluer.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 16 (reversed) -->
+    <div class="tl-entry" style="animation-delay:.50s">
+      <div class="tl-dot active-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">25 Jan. 2026</span>
+          <span class="tl-badge badge-medication">Gastro-pédiatrie — Ordonnance</span>
+          <span class="tl-title-text">Pr. Abdelghani YAGOUBI — Forlax 4 sachets/jour pendant 3 mois</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Pr. Abdelghani YAGOUBI — Gastro-entérologie Pédiatrique</p></div>
+          <div class="tl-field"><label>Prescription</label><p><strong>FORLAX 10G :</strong> 4 sachets/jour pendant 3 mois.</p></div>
+          <div class="tl-field full"><label>Signification</label><p>Augmentation
+ de la dose de Forlax par rapport à l'ordonnance du 26/11/2025 (3,5
+sachets → 4 sachets/jour). Cette prescription est la source de la dose
+actuelle de Forlax 40 g/j mentionnée dans le traitement en cours.
+Prescrit par Pr. YAGOUBI — à distinguer de l'ordonnance antérieure
+attribuée à Dr. Yacoubi Noureddine dans les versions précédentes de ce
+dossier.</p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Document A7</span>
+              <span class="bilan-doc-title">Ordonnance — Pr. Abdelghani YAGOUBI (Gastro-pédiatrie)</span>
+              <span class="bilan-doc-meta">25/01/2026</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-row"><span class="bilan-row-label">FORLAX 10G</span><span class="bilan-row-val">4 sachets/jour</span><span class="bilan-row-norm">3 mois</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 17 (reversed) -->
+    <div class="tl-entry" style="animation-delay:.485s">
+      <div class="tl-dot amber-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">27 Déc. 2025</span>
+          <span class="tl-badge badge-medication">Orthopédie — Ordonnance</span>
+          <span class="tl-title-text">Dr MOUALEK Fayçal — Traitement anti-inflammatoire pour douleurs articulaires (Solupred, Clofenal, Dolyp, Tauflex)</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Dr MOUALEK Fayçal — Chirurgie Orthopédique, Khemis Miliana</p></div>
+          <div class="tl-field"><label>Pharmacie</label><p>ALOUANE MED LAMINE, Khemis Miliana</p></div>
+          <div class="tl-field"><label>Contexte</label><p>Poursuite du
+suivi des douleurs articulaires chroniques (genoux, douleurs diffuses)
+dans le contexte d'une hypothyroïdie mal contrôlée.</p></div>
+          <div class="tl-field full"><label>Traitements prescrits</label><p>
+            <strong>Solupred 20 mg :</strong> 3 cp/matin pendant 5 jours · <strong>Clofenal 25 mg :</strong> 1 boîte · <strong>Dolyp 500 mg :</strong> 1 cp × 2/jour (2 boîtes) · <strong>Tauflex cap. :</strong> 1 cp × 2/jour (2 boîtes)
+          </p></div>
+          <div class="tl-field full"><label>! Note clinique</label><p>La
+ prescription de corticoïdes (Solupred) et d'AINS (Clofenal) doit être
+mise en relation avec la gastrite chronique documentée (FOGD 05/11/2025)
+ — risque gastrique à surveiller. Ces médicaments sont aujourd'hui
+arrêtés (traitement court terme).</p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Document A6</span>
+              <span class="bilan-doc-title">Ordonnance Orthopédique — Dr MOUALEK Fayçal</span>
+              <span class="bilan-doc-meta">27/12/2025 · Pharmacie ALOUANE MED LAMINE · Khemis Miliana</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-section-title">Médicaments prescrits</div>
+              <div class="bilan-row"><span class="bilan-row-label">SOLUPRED 20 mg</span><span class="bilan-row-val">3 cp/matin</span><span class="bilan-row-norm">5 jours</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">CLOFENAL 25 mg</span><span class="bilan-row-val">1 boîte</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">DOLYP 500 mg</span><span class="bilan-row-val">1 cp × 2/jour</span><span class="bilan-row-norm">2 boîtes</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">TAUFLEX cap.</span><span class="bilan-row-val">1 cp × 2/jour</span><span class="bilan-row-norm">2 boîtes</span></div>
+              <div class="bilan-conclusion"><strong>Statut :</strong> Traitement court terme — aujourd'hui arrêté.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 18 (reversed) -->
+    <div class="tl-entry" style="animation-delay:.47s">
+      <div class="tl-dot active-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">26 Nov. 2025</span>
+          <span class="tl-badge badge-medication">Gastro-pédiatrie — Ordonnance</span>
+          <span class="tl-title-text">Pr. Abdelghani YAGOUBI — Picoprep + Forlax 3,5 sachets/jour</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Pr. Abdelghani YAGOUBI — Gastro-entérologie Pédiatrique</p></div>
+          <div class="tl-field"><label>Contexte</label><p>Prescription post-FOGD (Dr Khodja, 05/11/2025) — prise en charge de la constipation chronique documentée.</p></div>
+          <div class="tl-field"><label>PICOPREP sachets</label><p>1 sachet/jour + 1 L d'eau — pendant 4 jours (préparation/nettoyage colique).</p></div>
+          <div class="tl-field"><label>FORLAX 10G</label><p>3,5 sachets/jour — pendant 1 mois.</p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Document A5</span>
+              <span class="bilan-doc-title">Ordonnance — Pr. Abdelghani YAGOUBI (Gastro-pédiatrie)</span>
+              <span class="bilan-doc-meta">26/11/2025</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-row"><span class="bilan-row-label">PICOPREP sachets</span><span class="bilan-row-val">1 sachet/jour + 1 L eau</span><span class="bilan-row-norm">4 jours</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">FORLAX 10G</span><span class="bilan-row-val">3,5 sachets/jour</span><span class="bilan-row-norm">1 mois</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 19 (reversed) -->
+    <div class="tl-entry" style="animation-delay:.455s">
+      <div class="tl-dot active-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">09 Nov. 2025</span>
+          <span class="tl-badge badge-test">Histopathologie — Résultat</span>
+          <span class="tl-title-text">Dr Boucebha Abdelkader — Pan-gastrite chronique modérée · Pas d'atrophie vraie · H. pylori négatif · Muqueuse duodénale normale</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Pathologiste</label><p>Dr
+Boucebha Abdelkader — Anatomopathologie. Réf. HU28KJ. 3 tubes : Tube 1
+(1 bx / antre), Tube 2 (4 bx / fundus), Tube 3 (3 bx / duodénum).</p></div>
+          <div class="tl-field"><label>Muqueuse duodénale (Tube 3)</label><p>Villosités <span class="val-ok">conservées</span>. Lymphocytose intraépithéliale ~30%. Chorion œdémateux, légère réaction lymphoplasmocytaire. <span class="val-ok">Pas de giardiase.</span></p></div>
+          <div class="tl-field"><label>Muqueuse antro-pylorique (Tube 1)</label><p>Masse
+ glandulaire normale. Infiltrat lymphoplasmocytaire chronique (diffus et
+ folliculaire). 3 follicules lymphoïdes hyperplasiques + éosinophiles
+++.</p></div>
+          <div class="tl-field"><label>Muqueuse fundique (Tube 2)</label><p>Masse glandulaire réduite, structures différenciées, cellules pariétales présentes. Infiltrat chronique diffus léger. <span class="val-ok">Pas de métaplasie ni de kystes.</span></p></div>
+          <div class="tl-field full"><label>! Conclusion histopathologique</label><p>
+            <strong>Muqueuse duodénale :</strong> <span class="val-ok">Normale — pas d'atrophie villositaire.</span><br>
+            <strong>Gastrite :</strong> Pan-gastrite chronique modérée, sans signes d'atrophie vraie (prédominance antrale). Activité légère. <span class="val-ok">H. pylori négatif.</span> Pas de métaplasie, dysplasie ni malignité.<br>
+            <strong>Signification :</strong> Ce résultat confirme une
+gastrite à prédominance auto-immune plutôt qu'infectieuse — cohérent
+avec les Ac anti-pariétaux très positifs. La négativité H. pylori sur
+biopsies valide les doutes des spécialistes sur le traitement
+antibiotique antérieur.
+          </p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Document A4</span>
+              <span class="bilan-doc-title">Rapport Histopathologique — Dr Boucebha Abdelkader</span>
+              <span class="bilan-doc-meta">09/11/2025 · Réf. HU28KJ · 3 tubes</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-section-title">Muqueuse Duodénale — Tube 3 (3 bx)</div>
+              <div class="bilan-row"><span class="bilan-row-label">Villosités</span><span class="bilan-row-val val-ok">Conservées</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Lymphocytose intraépithéliale</span><span class="bilan-row-val">~30 %</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Chorion</span><span class="bilan-row-val">Œdémateux, légère réaction lymphoplasmocytaire</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Giardiase</span><span class="bilan-row-val val-ok">Absente</span></div>
+              <div class="bilan-section-title">Muqueuse Antro-pylorique — Tube 1 (1 bx)</div>
+              <div class="bilan-row"><span class="bilan-row-label">Masse glandulaire</span><span class="bilan-row-val val-ok">Normale</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Infiltrat lymphoplasmocytaire</span><span class="bilan-row-val">Chronique, diffus et folliculaire</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Follicules lymphoïdes</span><span class="bilan-row-val val-low">3 hyperplasiques</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Éosinophiles</span><span class="bilan-row-val val-low">++ présents</span></div>
+              <div class="bilan-section-title">Muqueuse Fundique — Tube 2 (4 bx)</div>
+              <div class="bilan-row"><span class="bilan-row-label">Masse glandulaire</span><span class="bilan-row-val val-low">Réduite</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Cellules pariétales</span><span class="bilan-row-val val-ok">Présentes</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Structures</span><span class="bilan-row-val val-ok">Différenciées</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Infiltrat chronique</span><span class="bilan-row-val">Diffus, léger</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Métaplasie / Kystes</span><span class="bilan-row-val val-ok">Absents</span></div>
+              <div class="bilan-section-title">Conclusions Globales</div>
+              <div class="bilan-row"><span class="bilan-row-label">Atrophie villositaire duodénale</span><span class="bilan-row-val val-ok">Absente</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Type de gastrite</span><span class="bilan-row-val">Pan-gastrite chronique modérée</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Atrophie vraie</span><span class="bilan-row-val val-ok">Absente</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">H. pylori (biopsie)</span><span class="bilan-row-val val-ok">NÉGATIF</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Métaplasie / Dysplasie / Malignité</span><span class="bilan-row-val val-ok">Absentes</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 20 (reversed) -->
+    <div class="tl-entry" style="animation-delay:.44s">
+      <div class="tl-dot warn-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">05 Nov. 2025</span>
+          <span class="tl-badge badge-test">FOGD + Anatomopathologie</span>
+          <span class="tl-title-text">Dr Hassen Khodja — Pan-gastrite (antrale micronodulaire + fundique atrophique) + lymphangiectasies duodénales</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Dr Hassen Khodja — Gastro-entérologie</p></div>
+          <div class="tl-field"><label>Motif</label><p>Ac anti-cellules pariétales positifs, suivi hypothyroïdie.</p></div>
+          <div class="tl-field"><label>Conditions</label><p>Sous sédation.</p></div>
+          <div class="tl-field"><label>Œsophage</label><p><span class="val-ok">Sain.</span></p></div>
+          <div class="tl-field"><label>Estomac — Fundus</label><p>Hauteur des plis réduite, muqueuse à aspect <strong>atrophique</strong>. Biopsie réalisée (tube 02).</p></div>
+          <div class="tl-field"><label>Estomac — Antre</label><p>Muqueuse <strong>micronodulaire</strong>, grands plis pré-pyloriques. Biopsie réalisée (tube 01).</p></div>
+          <div class="tl-field"><label>Pylore / Bulbe</label><p>Centré, perméable. Bulbe sain.</p></div>
+          <div class="tl-field"><label>Duodénum (D1, D2)</label><p><strong>Lymphangiectasies</strong> identifiées → biopsies systématiques (tube 03).</p></div>
+          <div class="tl-field full"><label>! Conclusion endoscopique</label><p><strong>Pan-gastrite</strong>
+ : gastrite antrale micronodulaire + gastrite fundique atrophique.
+Lymphangiectasies duodénales avec biopsies systématiques envoyées en
+anatomopathologie. Demande ANAPATH réf. HU28KJ.</p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Document A3</span>
+              <span class="bilan-doc-title">FOGD — Fibroscopie oeso-gastro-duodénale</span>
+              <span class="bilan-doc-meta">05/11/2025 · Dr Hassen Khodja · Sous sédation</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-row"><span class="bilan-row-label">Motif</span><span class="bilan-row-val">Ac anti-pariétaux (+), suivi hypothyroïdie</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Œsophage</span><span class="bilan-row-val val-ok">Sain</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Lac muqueux gastrique</span><span class="bilan-row-val val-ok">Clair, abondance normale</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Fundus</span><span class="bilan-row-val val-low">Plis réduits, muqueuse atrophique → Bx tube 02</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Antre</span><span class="bilan-row-val val-low">Micronodulaire, grands plis pré-pyloriques → Bx tube 01</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Angulus / Sous-cardial</span><span class="bilan-row-val val-ok">Sains</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Pylore</span><span class="bilan-row-val val-ok">Centré, perméable</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Bulbe</span><span class="bilan-row-val val-ok">Sain</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Duodénum D1-D2</span><span class="bilan-row-val val-low">Lymphangiectasies → Bx systématique tube 03</span></div>
+              <div class="bilan-conclusion"><strong>Conclusion :</strong> Pan-gastrite (antrale micronodulaire + fundique atrophique). Lymphangiectasies duodénales. Biopsies → ANAPATH réf. HU28KJ.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 21 (reversed) -->
+    <div class="tl-entry" style="animation-delay:.425s">
+      <div class="tl-dot amber-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">30 Oct. 2025</span>
+          <span class="tl-badge badge-medication">Gastro-entérologie — Ordonnance</span>
+          <span class="tl-title-text">Dr Nasreddine RAHEM — Prescription gastro-entérologique (Lisinox, Nobac, Spasfon, Debridat)</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Dr Nasreddine RAHEM — Gastro-entérologie</p></div>
+          <div class="tl-field"><label>Pharmacie</label><p>Bordj El Bahri</p></div>
+          <div class="tl-field full"><label>Traitements prescrits</label><p>
+            <strong>LISINOX 20 mg :</strong> 1 cp/jour (1 boîte) · <strong>NOBAC susp. :</strong> 1 c. à café 3×/jour (1 flacon) · <strong>SPASFON LYOC 80 mg :</strong> 1 cp 2×/jour (1 boîte) · <strong>DEBRIDAT susp. :</strong> 1 c. à café 3×/jour (1 boîte)
+          </p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Document A2</span>
+              <span class="bilan-doc-title">Ordonnance — Gastro-entérologie · Dr N. RAHEM</span>
+              <span class="bilan-doc-meta">30/10/2025 · Pharmacie Bordj El Bahri</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-section-title">Médicaments prescrits</div>
+              <div class="bilan-row"><span class="bilan-row-label">LISINOX 20 mg</span><span class="bilan-row-val">1 cp/jour</span><span class="bilan-row-norm">1 boîte</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">NOBAC susp.</span><span class="bilan-row-val">1 c. à café × 3/jour</span><span class="bilan-row-norm">1 flacon</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">SPASFON LYOC 80 mg</span><span class="bilan-row-val">1 cp × 2/jour</span><span class="bilan-row-norm">1 boîte</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">DEBRIDAT susp.</span><span class="bilan-row-val">1 c. à café × 3/jour</span><span class="bilan-row-norm">1 boîte</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 22 -->
+    <div class="tl-entry" style="animation-delay:.41s">
+      <div class="tl-dot warn-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">Oct. 2025</span>
+          <span class="tl-badge badge-test">Bilan Complet</span>
+          <span class="tl-title-text">Bilan multi-spécialités — nouvelles découvertes (lithiase, anémie)</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>22/10/2025 — Échocardiographie (Dr BOUDJELLAL)</label><p>Anatomie normale. FE-VG : 70% OK. Pas d'HTAP. Péricarde sec. <strong>Échocardiographie 100% normale.</strong></p></div>
+          <div class="tl-field"><label>07/10/2025 — Écho abdominale (Dr L. BOUTAOUA)</label><p>Vésicule biliaire : présence de <strong>lithiase (calculs)</strong>. Aérocolie importante (+++). Foie, rate, reins, vessie : normaux.</p></div>
+          <div class="tl-field"><label>13/10/2025 — Médecine Interne (Dr L. BOUTAOUA)</label><p>Ac anti-cellules pariétales : <span class="val-high">&gt; 100,0 U/L (POSITIF)</span>. Confirmation. Dose Levothyrox : 175 µg. Hypothyroïdie congénitale "jamais bien équilibrée".</p></div>
+          <div class="tl-field"><label>Bilan hématologique (Oct. 2025)</label><p>Hémoglobine : <span class="val-low">10,3 g/dl</span> (↓). GR : <span class="val-low">4,38 ×10⁶/ml</span> (↓). TGMH : <span class="val-low">23,5 pg</span> (↓). Fer : <span class="val-low">40 µg/dl</span> (↓). Ferritine : 15,59 ng/ml (limite basse). Vit. B12 : 234 pg/ml. Ac anti-facteur intrinsèque : Négatif.</p></div>
+          <div class="tl-field"><label>30/11/2025 — Bilan ionique</label><p>Créatinine : 8,73 mg/l OK. K : 4,50 mmol/l OK. Na : 142,0 mmol/l OK.</p></div>
+          <div class="tl-field full"><label>02/11/2025 — Endocrinologie Pr DJIDEL</label><p>Augmentation du traitement : <strong>Levothyrox 100 µg × 2 comprimés/matin à jeun (200 µg/jour)</strong> + Magnésium B6 (1 cp/soir). TSH au 30/10/2025 : <span class="val-high">19,610 µUI/ml</span>.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 23 (reversed) -->
+    <div class="tl-entry" style="animation-delay:.395s">
+      <div class="tl-dot amber-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">20 Fév. 2022</span>
+          <span class="tl-badge badge-test">Bilan Biologique</span>
+          <span class="tl-title-text">Dr HOUTI Noureddine — FNS + biochimie + sérologie inflammatoire + prolactine élevée · VS accélérée</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Laboratoire</label><p>Dr HOUTI
+Noureddine (Médecin Biologiste) · Laboratoire d'Analyses Médicales ·
+Agrément N°35/2014 · Khemis Miliana. Dossier N° 02804. Âge patient : 11
+ans.</p></div>
+          <div class="tl-field"><label>FNS — Hémoglobine / Hématocrite</label><p>Hémoglobine : <span class="val-ok">12,2 g/dl</span> (norme 12–14,8). Hématocrite : <span class="val-low">35,5 %</span>
+ (↓ norme 36–45). GR : 4,45 ×10⁶/ml (limite basse norme 4,5–5). VGM :
+79,8 fl OK. TGMH : 27,4 pg OK. CCMH : 34,4 g/dl (légèrement au-dessus
+norme 28–33).</p></div>
+          <div class="tl-field"><label>FNS — Leucocytes</label><p>GB : 6,04 ×10³/ml OK. Neutrophiles : <span class="val-low">44,7 %</span> (↓ limite norme 45–70). Lymphocytes : 41,4% OK. Éosinophiles : 4,8% OK. Plaquettes : 232 ×10³/ml OK. IDR-SD : <span class="val-low">36 fl</span> (↓ norme 37–54).</p></div>
+          <div class="tl-field"><label>! VS (Vitesse de Sédimentation)</label><p>1ère heure : <span class="val-high">17 mm</span> (↑ norme &lt;13). 2ème heure : <span class="val-high">43 mm</span> (↑ norme &lt;35). <strong>VS accélérée — syndrome inflammatoire biologique.</strong></p></div>
+          <div class="tl-field"><label>! Phosphatases alcalines</label><p><span class="val-high">706,00 UI/l</span> (↑↑ norme &lt;400) — <strong>très élevées, vérifiées à deux reprises</strong> (note du laboratoire). Calcémie : 86,74 mg/l OK. Phosphorémie : 45,86 mg/l OK.</p></div>
+          <div class="tl-field"><label>Sérologie inflammatoire</label><p>ASLO : <span class="val-low">200 UI/l</span> (à la limite norme &lt;200). Latex : Négatif. Waaler Rose : Négatif. CRP : 3,55 mg/l (normale &lt;5,99).</p></div>
+          <div class="tl-field"><label>! Prolactine</label><p><span class="val-high">21,89 ng/ml</span> (↑ norme 4,6–21,4) — légèrement au-dessus de la norme. À confronter à l'axe hypophysaire.</p></div>
+          <div class="tl-field full"><label>Signification clinique</label><p>Ce bilan révèle plusieurs anomalies notables en février 2022 : <strong>(1)</strong> VS accélérée et ASLO limite — syndrome inflammatoire infraclinique ; <strong>(2)</strong>
+ Phosphatases alcalines très élevées (706 UI/l, confirmées) — suggèrent
+une activité osseuse intense (croissance) ou une pathologie
+hépatique/osseuse à investiguer, dans un contexte d'hypothyroïdie mal
+contrôlée (TSH 18,24 µUI/ml le 12/02/2022) ; <strong>(3)</strong>
+Prolactine légèrement élevée — à rapprocher de l'hypotrophie
+hypophysaire confirmée en 2026 (axe hypothalamo-hypophysaire
+potentiellement perturbé dès cette période) ; <strong>(4)</strong> Hématocrite à la limite inférieure — cohérent avec l'anémie ferriprive documentée ultérieurement.</p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Document 1000007947</span>
+              <span class="bilan-doc-title">Hématologie — FNS + VS</span>
+              <span class="bilan-doc-meta">20/02/2022 (imprimé 21/02/2022) · Dr HOUTI Noureddine · 11 ans · Dossier N°02804</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-section-title">Hématologie — Numération Formule Sanguine</div>
+              <div class="bilan-row"><span class="bilan-row-label">Globules Blancs</span><span class="bilan-row-val val-ok">6,04 ×10³/ml</span><span class="bilan-row-norm">N: 4,5–13</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Globules Rouges</span><span class="bilan-row-val val-low">4,45 ×10⁶/ml</span><span class="bilan-row-norm">N: 4,5–5</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Hémoglobine</span><span class="bilan-row-val val-ok">12,2 g/dl</span><span class="bilan-row-norm">N: 12–14,8</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Hématocrite</span><span class="bilan-row-val val-low">35,5 %</span><span class="bilan-row-norm">N: 36–45</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">VGM</span><span class="bilan-row-val val-ok">79,8 fl</span><span class="bilan-row-norm">N: 74–91</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">TGMH</span><span class="bilan-row-val val-ok">27,4 pg</span><span class="bilan-row-norm">N: 24–30</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">CCMH</span><span class="bilan-row-val val-low">34,4 g/dl</span><span class="bilan-row-norm">N: 28–33</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Plaquettes</span><span class="bilan-row-val val-ok">232 ×10³/ml</span><span class="bilan-row-norm">N: 150–400</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">IDR-SD</span><span class="bilan-row-val val-low">36 fl</span><span class="bilan-row-norm">N: 37,0–54,0</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">IDR-CV</span><span class="bilan-row-val val-ok">12,6 %</span><span class="bilan-row-norm">N: 11,0–16,0</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">IDP</span><span class="bilan-row-val val-ok">16,3 fl</span><span class="bilan-row-norm">N: 10,3–16,3</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">VMP</span><span class="bilan-row-val val-ok">11,9 fl</span><span class="bilan-row-norm">N: 6,5–12</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">P-RGC</span><span class="bilan-row-val val-ok">42,1 %</span><span class="bilan-row-norm">N: 13,0–43,0</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">PCT</span><span class="bilan-row-val val-ok">0,28 %</span><span class="bilan-row-norm">N: 0,17–0,35</span></div>
+              <div class="bilan-section-title">Formule Leucocytaire</div>
+              <div class="bilan-row"><span class="bilan-row-label">Neutrophiles</span><span class="bilan-row-val val-low">44,7 % (2,7 ×10³/ml)</span><span class="bilan-row-norm">N: 45–70 %</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Lymphocytes</span><span class="bilan-row-val val-ok">41,4 % (2,5 ×10³/ml)</span><span class="bilan-row-norm">N: 20–50 %</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Monocytes</span><span class="bilan-row-val val-ok">8,6 % (0,52 ×10³/ml)</span><span class="bilan-row-norm">N: 2–10 %</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Éosinophiles</span><span class="bilan-row-val val-ok">4,8 % (0,29 ×10³/ml)</span><span class="bilan-row-norm">N: 0–6,0 %</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Basophiles</span><span class="bilan-row-val val-ok">0,5 % (0,03 ×10³/ml)</span><span class="bilan-row-norm">N: 0–1 %</span></div>
+              <div class="bilan-section-title">VS — Vitesse de Sédimentation !</div>
+              <div class="bilan-row"><span class="bilan-row-label">1ère Heure</span><span class="bilan-row-val val-high">17 mm</span><span class="bilan-row-norm">N: &lt;13</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">2ème Heure</span><span class="bilan-row-val val-high">43 mm</span><span class="bilan-row-norm">N: &lt;35</span></div>
+            </div>
+
+            <div class="bilan-doc-header" style="margin-top:14px;">
+              <span class="bilan-doc-badge">Document 1000007948</span>
+              <span class="bilan-doc-title">Biochimie + Sérologie Inflammatoire + Hormonologie</span>
+              <span class="bilan-doc-meta">20/02/2022 · Dr HOUTI Noureddine · Dossier N°02804</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-section-title">Biochimie !</div>
+              <div class="bilan-row"><span class="bilan-row-label">Phosphatases alcalines</span><span class="bilan-row-val val-high">706,00 UI/l</span><span class="bilan-row-norm">N: &lt;400 · vérifié ×2</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Calcémie</span><span class="bilan-row-val val-ok">86,74 mg/l</span><span class="bilan-row-norm">N: 86–103</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Phosphorémie</span><span class="bilan-row-val val-ok">45,86 mg/l</span><span class="bilan-row-norm">N enfant: 40–60</span></div>
+              <div class="bilan-section-title">Sérologie Inflammatoire</div>
+              <div class="bilan-row"><span class="bilan-row-label">A.S.L.O.</span><span class="bilan-row-val val-low">200 UI/l</span><span class="bilan-row-norm">N: &lt;200 (limite)</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Latex</span><span class="bilan-row-val val-ok">Négatif</span><span class="bilan-row-norm">N: &lt;8</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Waaler Rose</span><span class="bilan-row-val val-ok">Négatif</span><span class="bilan-row-norm">N: &lt;8</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">C.R.P.</span><span class="bilan-row-val val-ok">3,55 mg/l</span><span class="bilan-row-norm">N: 0–5,99</span></div>
+              <div class="bilan-section-title">Hormonologie !</div>
+              <div class="bilan-row"><span class="bilan-row-label">Prolactine</span><span class="bilan-row-val val-high">21,89 ng/ml</span><span class="bilan-row-norm">N: 4,6–21,4</span></div>
+              <div class="bilan-conclusion"><strong>! Observation du laboratoire :</strong> Le dosage des phosphatases alcalines a été réalisé et contrôlé à deux reprises pour confirmation.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 24 -->
+    <div class="tl-entry" style="animation-delay:.38s">
+      <div class="tl-dot ok-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">Fév. 2022 – Oct. 2024</span>
+          <span class="tl-badge badge-resolved">Suivi pédiatrique — Équilibré</span>
+          <span class="tl-title-text">Période d'équilibre relatif — suivi Dr H. Delileche (Pédiatre)</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>12/02/2022 — TSH</label><p><span class="val-high">TSH : 18,24 µUI/ml</span> (élevée, en cours de rééquilibrage)</p></div>
+          <div class="tl-field"><label>Suivi Dr H. Delileche</label><p>Pédiatre, Khemis Miliana — de Fév. 2022 à Fév. 2025. État globalement équilibré en 2022, 2023 et début 2024.</p></div>
+          <div class="tl-field"><label>Notes du Dr Delileche</label><p>Attitude
+ scoliotique traitée par rééducation. Piste de l'asthme formellement
+éliminée. Gastrite avec RGO documentés. Poids : 49 kg / Taille : 145 cm
+(Oct. 2025).</p></div>
+          <div class="tl-field"><label>Rupture d'équilibre (01/10/2024)</label><p><span class="val-high">TSH : 225 µUI/ml</span> (FT4 : 12,93) sous Levothyrox 150 µg. Puis au 12/02/2025 : <span class="val-high">TSH : 100 µUI/ml</span> (FT4 : 8,91) malgré passage à 175 µg.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 25 -->
+    <div class="tl-entry" style="animation-delay:.35s">
+      <div class="tl-dot ok-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">Jusqu'en 2022</span>
+          <span class="tl-badge badge-specialist">Orthopédie Pédiatrique</span>
+          <span class="tl-title-text">Douleurs chroniques aux genoux — liées à la croissance</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Médecin</label><p>Dr Yacine ABDENNOUR (Orthopédiste pédiatrique)</p></div>
+          <div class="tl-field"><label>Diagnostic</label><p>Douleurs liées à la croissance et à l'approche de la puberté — bénignes.</p></div>
+          <div class="tl-field full"><label>Recommandation</label><p>Pratique régulière du sport encouragée. Douleurs persistantes néanmoins documentées dans les bilans ultérieurs.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 26 -->
+    <div class="tl-entry" style="animation-delay:.32s">
+      <div class="tl-dot active-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">Avr.–Mai 2021</span>
+          <span class="tl-badge badge-active">Auto-Immunité — Confirmée</span>
+          <span class="tl-title-text">Ac anti-cellules pariétales positifs (1/320) — suspicion Biermer</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>26/04/2021 — Labo Dr HOUTI (10 ans)</label><p>Auto-Ac anti-cellules pariétales (IFI) : <span class="val-high">Titre 1/320</span> (norme &lt; 40). ! Fortement positif.</p></div>
+          <div class="tl-field"><label>Bilan sanguin associé (04/2021)</label><p>Fer sérique : <span class="val-low">39 µg/dl</span> (↓). Ferritine : <span class="val-low">9,91 ng/ml</span> (↓). Vit. D : <span class="val-low">20,3 ng/ml</span> (↓). Vit. B12 : 434,9 pg/ml (normale).</p></div>
+          <div class="tl-field"><label>03/05/2021 — Écho genou (Dr TOUCHENE)</label><p>Lame liquidienne intra-articulaire au niveau du récessus sous-quadricipital du genou droit.</p></div>
+          <div class="tl-field"><label>30/05/2021 — Écho abdominale (Dr RAHEM)</label><p>Foie, vésicule, reins, rate, pancréas, vessie : normaux. Conclusion : <strong>Aérocolie diffuse</strong>.</p></div>
+          <div class="tl-field"><label>23/08/2021 — TSH</label><p><span class="val-ok">TSH : 3,330 µUI/ml</span> (équilibrée OK)</p></div>
+          <div class="tl-field full"><label>Conclusion Dr BOUHEDDA (06/05/2021)</label><p>Suivi
+ en gastro-entérologie pour thyroïdite auto-immune. Suspicion d'un
+syndrome de malabsorption. Ac anti-cellules pariétales positifs →
+question d'une éventuelle <strong>maladie de Biermer (anémie pernicieuse)</strong> associée posée formellement.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 27 -->
+    <div class="tl-entry" style="animation-delay:.29s">
+      <div class="tl-dot warn-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">2020–2021 (Ramadan)</span>
+          <span class="tl-badge badge-episode">Épisode critique</span>
+          <span class="tl-title-text">Blocage complet du genou droit — 25 jours — IRM / Scanner normaux</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Durée</label><p>Du 3 au 27 Ramadan (25 jours), jambe bloquée pliée.</p></div>
+          <div class="tl-field"><label>TSH au moment de l'épisode</label><p>~300 µUI/ml (sévèrement élevée)</p></div>
+          <div class="tl-field"><label>Imagerie (IRM + Scanner + Radio osseuse)</label><p>Toutes normales — aucune anomalie structurelle objectivée.</p></div>
+          <div class="tl-field"><label>Hypothèse cœliaque</label><p>Dr
+BOUHEDDA suspecte une maladie cœliaque entravant l'absorption
+médicamenteuse. Analyses → NÉGATIVES (Anti-endomysium IgA,
+Anti-transglutaminase, Anti-gliadine tous négatifs).</p></div>
+          <div class="tl-field full"><label>Conclusion retenue</label><p>Complication
+ musculaire rare d'une hypothyroïdie sévère. Épisode corrélé au pic de
+TSH élevée — souligne l'importance critique du contrôle thyroïdien chez
+ce patient.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 28 -->
+    <div class="tl-entry" style="animation-delay:.26s">
+      <div class="tl-dot amber-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">Vers 7–8 ans (2018–2019)</span>
+          <span class="tl-badge badge-episode">Symptômes chroniques</span>
+          <span class="tl-title-text">Douleurs thoraciques et faiblesse sévère aux genoux</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field full"><label>Description</label><p>Premières
+ plaintes de douleurs thoraciques ("au cœur") et de faiblesse sévère aux
+ genoux (sensation de fragilité). Origine à ce stade non élucidée. Ces
+symptômes persistent jusqu'à aujourd'hui sous différentes formes.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 29 -->
+    <div class="tl-entry" style="animation-delay:.23s">
+      <div class="tl-dot amber-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">2016–2017</span>
+          <span class="tl-badge badge-resolved">ORL — Résolu</span>
+          <span class="tl-title-text">Perforation tympanique — cicatrisation complète après ~1 an</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Cause</label><p>Accumulation de sécrétions nasales chroniques (glaires)</p></div>
+          <div class="tl-field"><label>Durée du traitement</label><p>~1 an jusqu'à cicatrisation complète OK</p></div>
+          <div class="tl-field full"><label>Problème persistant</label><p>Tendance aux bouchons de cérumen sévères et durs (aspect "pois chiche") bloquant l'audition — suivi ORL périodique nécessaire.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 30 -->
+    <div class="tl-entry" style="animation-delay:.20s">
+      <div class="tl-dot amber-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">28 Mai 2016</span>
+          <span class="tl-badge badge-test">Radiologie</span>
+          <span class="tl-title-text">Retard de l'âge osseux — 3,5 ans pour un âge réel de 5 ans</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Examen</label><p>Radiographie poignet gauche de face (Dr GHOBSI / Pr DJIDEL, Khemis Miliana)</p></div>
+          <div class="tl-field"><label>Résultat</label><p>Âge osseux estimé à <strong>3,5 ans</strong>
+ (méthode de Greulich &amp; Pyle) pour un âge chronologique de 5 ans.
+Absence d'anomalie osseuse. Intégrité des interlignes articulaires.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 31 -->
     <div class="tl-entry" style="animation-delay:.17s">
       <div class="tl-dot warn-dot"></div>
       <div class="tl-card">
@@ -452,7 +1455,9 @@
         </div>
         <div class="tl-details">
           <div class="tl-field"><label>16/06/2014 — Labo OULD ROUIS</label><p><span class="val-high">TSH : 751,700 µUI/ml</span> (norme enfant : 0,53–4,63). Âge : 3 ans.</p></div>
-          <div class="tl-field"><label>19/06/2014 — Échographie cervicale (Dr LEBAILLI)</label><p>Thyroïde en place, taille normale. Volume total : 3,4 cc (D : 12×10×30 mm / G : 10×9×30 mm). Trachée médiane. Pas d'adénopathie. OK</p></div>
+          <div class="tl-field"><label>19/06/2014 — Échographie cervicale (Dr LEBAILLI)</label><p>Thyroïde
+ en place, taille normale. Volume total : 3,4 cc (D : 12×10×30 mm / G :
+10×9×30 mm). Trachée médiane. Pas d'adénopathie. OK</p></div>
           <div class="tl-field"><label>19/06/2014 — Scintigraphie (Dr Qaïs NAILI, Blida)</label><p>Thyroïde en place, modérément hyperfixante de façon homogène et symétrique. Absence de foyers localisés.</p></div>
           <div class="tl-field"><label>! Conclusion scintigraphique</label><p>"L'hypothyroïdie congénitale fait discuter dans ce contexte une <strong>origine centrale ?</strong>" — suspicion d'atteinte hypophysaire notée dès 2014, jamais élucidée.</p></div>
           <div class="tl-field"><label>13/10/2014</label><p><span class="val-high">TSH : 152,800 µUI/ml</span> (en baisse après ajustement thérapeutique)</p></div>
@@ -520,709 +1525,142 @@
       </div>
     </div>
 
-    <!-- 6 -->
-    <div class="tl-entry" style="animation-delay:.20s">
-      <div class="tl-dot amber-dot"></div>
+    <!-- 32 -->
+    <div class="tl-entry" style="animation-delay:.14s">
+      <div class="tl-dot warn-dot"></div>
       <div class="tl-card">
         <div class="tl-top">
-          <span class="tl-year">28 Mai 2016</span>
+          <span class="tl-year">Fin 2011</span>
+          <span class="tl-badge badge-episode">Urgence Neurologique</span>
+          <span class="tl-title-text">Crise convulsive fébrile — arrêt par Valium IV</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Lieu</label><p>Urgences UMC (vers 6–9 mois)</p></div>
+          <div class="tl-field"><label>Fièvre rapportée</label><p>45°C (selon le médecin généraliste)</p></div>
+          <div class="tl-field"><label>Sémiologie</label><p>Arrêt des mouvements ("t'affissa"), tête rigide et lourde penchée sur le côté, yeux révulsés (blancs), pleurs étouffés.</p></div>
+          <div class="tl-field"><label>Traitement</label><p>Diazépam (Valium) en injection — crise stoppée avec succès.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 33 -->
+    <div class="tl-entry" style="animation-delay:.11s">
+      <div class="tl-dot active-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">25 Juin 2011</span>
+          <span class="tl-badge badge-active">Diagnostic — Officiel</span>
+          <span class="tl-title-text">Hypothyroïdie Congénitale confirmée — hospitalisation 20 jours</span>
+        </div>
+        <div class="tl-details">
+          <div class="tl-field"><label>Laboratoire</label><p>Dr Hachmi OULD ROUIS (Âge : 4 mois)</p></div>
+          <div class="tl-field"><label>Hospitalisation</label><p>20 jours avec complications intestinales ("ventre bouclé")</p></div>
+          <div class="tl-field"><label>Bilan hémato. (25/06/2011)</label><p>Hémoglobine :
+ 8,6 g/dl (↓ norme 11–13). Hématocrite : 25,5% (↓). VGM : 73 fl.
+Lymphocytes : 63,8%. Plaquettes : 402 mille/mm³ (normale).</p></div>
+          <div class="tl-field"><label>Traitement initié</label><p>L-Thyroxine en gouttes (importées de France), puis en comprimés. Suivi initié au CMC Kouba — Pr. DJIDEL. Traitement À VIE.</p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Document 2</span>
+              <span class="bilan-doc-title">Laboratoire — Hématologie</span>
+              <span class="bilan-doc-meta">25/06/2011 · Dr OULD ROUIS</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-section-title">Informations du document</div>
+              <div class="bilan-row"><span class="bilan-row-label">Patient</span><span class="bilan-row-val">ESSAIDI Youcef</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Âge</span><span class="bilan-row-val">4 mois</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Directeur labo</span><span class="bilan-row-val">Dr Hachmi OULD ROUIS</span></div>
+              <div class="bilan-section-title">Numération Formule Sanguine</div>
+              <div class="bilan-row"><span class="bilan-row-label">Globules Blancs</span><span class="bilan-row-val val-ok">10,3 mille/mm³</span><span class="bilan-row-norm">N: 6–15</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Globules Rouges</span><span class="bilan-row-val val-low">3,51 millions/mm³</span><span class="bilan-row-norm">N: 3,7–4,8</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Hémoglobine</span><span class="bilan-row-val val-low">8,6 g/dl</span><span class="bilan-row-norm">N: 11–13</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Hématocrite</span><span class="bilan-row-val val-low">25,5 %</span><span class="bilan-row-norm">N: 33–39</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">VGM</span><span class="bilan-row-val val-ok">73 fl</span><span class="bilan-row-norm">N: 70–86</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">TGMH</span><span class="bilan-row-val val-ok">24,6 pg</span><span class="bilan-row-norm">N: 24–30</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">CCMH</span><span class="bilan-row-val val-ok">33,9 g/dl</span><span class="bilan-row-norm">N: 32–36</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Plaquettes</span><span class="bilan-row-val val-ok">402 mille/mm³</span><span class="bilan-row-norm">N: 150–450</span></div>
+              <div class="bilan-section-title">Formule Leucocytaire</div>
+              <div class="bilan-row"><span class="bilan-row-label">Neutrophiles</span><span class="bilan-row-val">28,5 %</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Lymphocytes</span><span class="bilan-row-val">63,8 %</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Monocytes</span><span class="bilan-row-val">4,4 %</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Éosinophiles</span><span class="bilan-row-val">2,3 %</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Basophiles</span><span class="bilan-row-val">1 %</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 34 -->
+    <div class="tl-entry" style="animation-delay:.08s">
+      <div class="tl-dot ok-dot"></div>
+      <div class="tl-card">
+        <div class="tl-top">
+          <span class="tl-year">31 Mai 2011</span>
           <span class="tl-badge badge-test">Radiologie</span>
-          <span class="tl-title-text">Retard de l'âge osseux — 3,5 ans pour un âge réel de 5 ans</span>
+          <span class="tl-title-text">Radiographie thoracique — normale (4 mois)</span>
         </div>
         <div class="tl-details">
-          <div class="tl-field"><label>Examen</label><p>Radiographie poignet gauche de face (Dr GHOBSI / Pr DJIDEL, Khemis Miliana)</p></div>
-          <div class="tl-field"><label>Résultat</label><p>Âge osseux estimé à <strong>3,5 ans</strong> (méthode de Greulich &amp; Pyle) pour un âge chronologique de 5 ans. Absence d'anomalie osseuse. Intégrité des interlignes articulaires.</p></div>
+          <div class="tl-field"><label>Prescripteur</label><p>Dr BENMAAMAR</p></div>
+          <div class="tl-field"><label>Radiologue</label><p>Dr Rachid GHOBSI (Centre d'Imagerie, Khemis Miliana)</p></div>
+          <div class="tl-field full"><label>Résultats</label><p>Absence d'anomalies de transparence parenchymateuses pulmonaires. Médiastin de morphologie habituelle. Cadre osseux normal. OK</p></div>
+        </div>
+        <button class="bilan-toggle" onclick="toggleBilan(this)">
+          <span class="clip-icon">📎</span>
+          <span class="toggle-label">Voir le document source</span>
+          <span class="toggle-arrow">▼</span>
+        </button>
+        <div class="bilan-drawer">
+          <div class="bilan-drawer-inner">
+            <div class="bilan-doc-header">
+              <span class="bilan-doc-badge">Document 1</span>
+              <span class="bilan-doc-title">Radiologie — Radiographie Thoracique</span>
+              <span class="bilan-doc-meta">31/05/2011 · Dr GHOBSI / Dr BENMAAMAR</span>
+            </div>
+            <div class="bilan-rows">
+              <div class="bilan-section-title">Informations du document</div>
+              <div class="bilan-row"><span class="bilan-row-label">Patient</span><span class="bilan-row-val">ESSAIDI YOUSEF</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Âge</span><span class="bilan-row-val">04 mois</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Médecin traitant</span><span class="bilan-row-val">Dr BENMAAMAR</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Radiologue</span><span class="bilan-row-val">Dr Rachid GHOBSI</span></div>
+              <div class="bilan-section-title">Résultats</div>
+              <div class="bilan-row"><span class="bilan-row-label">Parenchyme pulmonaire</span><span class="bilan-row-val val-ok">Absence d'anomalies de transparence</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Médiastin</span><span class="bilan-row-val val-ok">Morphologie habituelle</span></div>
+              <div class="bilan-row"><span class="bilan-row-label">Cadre osseux</span><span class="bilan-row-val val-ok">Normal</span></div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- 7 -->
-    <div class="tl-entry" style="animation-delay:.23s">
+    <!-- 35 -->
+    <div class="tl-entry" style="animation-delay:.05s">
       <div class="tl-dot amber-dot"></div>
       <div class="tl-card">
         <div class="tl-top">
-          <span class="tl-year">2016–2017</span>
-          <span class="tl-badge badge-resolved">ORL — Résolu</span>
-          <span class="tl-title-text">Perforation tympanique — cicatrisation complète après ~1 an</span>
+          <span class="tl-year">03 Fév. 2011</span>
+          <span class="tl-badge badge-episode">Naissance / Néonatal</span>
+          <span class="tl-title-text">Accouchement compliqué — hypoxie et apnée néonatale sévère</span>
         </div>
         <div class="tl-details">
-          <div class="tl-field"><label>Cause</label><p>Accumulation de sécrétions nasales chroniques (glaires)</p></div>
-          <div class="tl-field"><label>Durée du traitement</label><p>~1 an jusqu'à cicatrisation complète OK</p></div>
-          <div class="tl-field full"><label>Problème persistant</label><p>Tendance aux bouchons de cérumen sévères et durs (aspect "pois chiche") bloquant l'audition — suivi ORL périodique nécessaire.</p></div>
+          <div class="tl-field"><label>Événement à la naissance</label><p>1–2 cris normaux, puis apnée / hypoxie sévère. Corps devenu rouge, puis cyanosé (violet/bleu). Réanimation d'urgence.</p></div>
+          <div class="tl-field"><label>Couveuse</label><p>De minuit à 08h30 (8h30) avec assistance respiratoire (oxygène).</p></div>
+          <div class="tl-field full"><label>Période post-natale (Fév.–Mai 2011)</label><p>Léthargie
+ totale (ne pleure ni le jour ni la nuit), très faible appétit (max 4
+tétées), incapacité initiale à téter. Constipation sévère nécessitant
+des suppositoires. Extrémités (mains/pieds) constamment froides et
+cyanosées malgré des vêtements chauds.</p></div>
         </div>
       </div>
     </div>
 
-    <!-- 8 -->
-    <div class="tl-entry" style="animation-delay:.26s">
-      <div class="tl-dot amber-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">Vers 7–8 ans (2018–2019)</span>
-          <span class="tl-badge badge-episode">Symptômes chroniques</span>
-          <span class="tl-title-text">Douleurs thoraciques et faiblesse sévère aux genoux</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field full"><label>Description</label><p>Premières plaintes de douleurs thoraciques ("au cœur") et de faiblesse sévère aux genoux (sensation de fragilité). Origine à ce stade non élucidée. Ces symptômes persistent jusqu'à aujourd'hui sous différentes formes.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 9 -->
-    <div class="tl-entry" style="animation-delay:.29s">
-      <div class="tl-dot warn-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">2020–2021 (Ramadan)</span>
-          <span class="tl-badge badge-episode">Épisode critique</span>
-          <span class="tl-title-text">Blocage complet du genou droit — 25 jours — IRM / Scanner normaux</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Durée</label><p>Du 3 au 27 Ramadan (25 jours), jambe bloquée pliée.</p></div>
-          <div class="tl-field"><label>TSH au moment de l'épisode</label><p>~300 µUI/ml (sévèrement élevée)</p></div>
-          <div class="tl-field"><label>Imagerie (IRM + Scanner + Radio osseuse)</label><p>Toutes normales — aucune anomalie structurelle objectivée.</p></div>
-          <div class="tl-field"><label>Hypothèse cœliaque</label><p>Dr BOUHEDDA suspecte une maladie cœliaque entravant l'absorption médicamenteuse. Analyses → NÉGATIVES (Anti-endomysium IgA, Anti-transglutaminase, Anti-gliadine tous négatifs).</p></div>
-          <div class="tl-field full"><label>Conclusion retenue</label><p>Complication musculaire rare d'une hypothyroïdie sévère. Épisode corrélé au pic de TSH élevée — souligne l'importance critique du contrôle thyroïdien chez ce patient.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 10 -->
-    <div class="tl-entry" style="animation-delay:.32s">
-      <div class="tl-dot active-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">Avr.–Mai 2021</span>
-          <span class="tl-badge badge-active">Auto-Immunité — Confirmée</span>
-          <span class="tl-title-text">Ac anti-cellules pariétales positifs (1/320) — suspicion Biermer</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>26/04/2021 — Labo Dr HOUTI (10 ans)</label><p>Auto-Ac anti-cellules pariétales (IFI) : <span class="val-high">Titre 1/320</span> (norme &lt; 40). ! Fortement positif.</p></div>
-          <div class="tl-field"><label>Bilan sanguin associé (04/2021)</label><p>Fer sérique : <span class="val-low">39 µg/dl</span> (↓). Ferritine : <span class="val-low">9,91 ng/ml</span> (↓). Vit. D : <span class="val-low">20,3 ng/ml</span> (↓). Vit. B12 : 434,9 pg/ml (normale).</p></div>
-          <div class="tl-field"><label>03/05/2021 — Écho genou (Dr TOUCHENE)</label><p>Lame liquidienne intra-articulaire au niveau du récessus sous-quadricipital du genou droit.</p></div>
-          <div class="tl-field"><label>30/05/2021 — Écho abdominale (Dr RAHEM)</label><p>Foie, vésicule, reins, rate, pancréas, vessie : normaux. Conclusion : <strong>Aérocolie diffuse</strong>.</p></div>
-          <div class="tl-field"><label>23/08/2021 — TSH</label><p><span class="val-ok">TSH : 3,330 µUI/ml</span> (équilibrée OK)</p></div>
-          <div class="tl-field full"><label>Conclusion Dr BOUHEDDA (06/05/2021)</label><p>Suivi en gastro-entérologie pour thyroïdite auto-immune. Suspicion d'un syndrome de malabsorption. Ac anti-cellules pariétales positifs → question d'une éventuelle <strong>maladie de Biermer (anémie pernicieuse)</strong> associée posée formellement.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 11 -->
-    <div class="tl-entry" style="animation-delay:.35s">
-      <div class="tl-dot ok-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">Jusqu'en 2022</span>
-          <span class="tl-badge badge-specialist">Orthopédie Pédiatrique</span>
-          <span class="tl-title-text">Douleurs chroniques aux genoux — liées à la croissance</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Médecin</label><p>Dr Yacine ABDENNOUR (Orthopédiste pédiatrique)</p></div>
-          <div class="tl-field"><label>Diagnostic</label><p>Douleurs liées à la croissance et à l'approche de la puberté — bénignes.</p></div>
-          <div class="tl-field full"><label>Recommandation</label><p>Pratique régulière du sport encouragée. Douleurs persistantes néanmoins documentées dans les bilans ultérieurs.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 12 -->
-    <div class="tl-entry" style="animation-delay:.38s">
-      <div class="tl-dot ok-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">Fév. 2022 – Oct. 2024</span>
-          <span class="tl-badge badge-resolved">Suivi pédiatrique — Équilibré</span>
-          <span class="tl-title-text">Période d'équilibre relatif — suivi Dr H. Delileche (Pédiatre)</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>12/02/2022 — TSH</label><p><span class="val-high">TSH : 18,24 µUI/ml</span> (élevée, en cours de rééquilibrage)</p></div>
-          <div class="tl-field"><label>Suivi Dr H. Delileche</label><p>Pédiatre, Khemis Miliana — de Fév. 2022 à Fév. 2025. État globalement équilibré en 2022, 2023 et début 2024.</p></div>
-          <div class="tl-field"><label>Notes du Dr Delileche</label><p>Attitude scoliotique traitée par rééducation. Piste de l'asthme formellement éliminée. Gastrite avec RGO documentés. Poids : 49 kg / Taille : 145 cm (Oct. 2025).</p></div>
-          <div class="tl-field"><label>Rupture d'équilibre (01/10/2024)</label><p><span class="val-high">TSH : 225 µUI/ml</span> (FT4 : 12,93) sous Levothyrox 150 µg. Puis au 12/02/2025 : <span class="val-high">TSH : 100 µUI/ml</span> (FT4 : 8,91) malgré passage à 175 µg.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 12b — NOUVEAU : Échographie thyroïdienne 05/10/2024 -->
-    <div class="tl-entry" style="animation-delay:.395s">
-      <div class="tl-dot amber-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">05 Oct. 2024</span>
-          <span class="tl-badge badge-test">Échographie Thyroïdienne</span>
-          <span class="tl-title-text">Dr H. Delileche — Volume thyroïdien normal + kyste lobe droit (0,47 cm)</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Médecin / Appareil</label><p>Dr H. Delileche (Endocrinologie pédiatrique) · Sonde linéaire 16 MHz, Samsung HS 40. Âge patient : 13 ans et 8 mois.</p></div>
-          <div class="tl-field"><label>Contexte</label><p>Bilan de suivi dans le cadre de la rupture d'équilibre thyroïdien — TSH à 225 µUI/ml (01/10/2024).</p></div>
-          <div class="tl-field"><label>Lobe droit</label><p>1,03 × 1,01 × 2,80 cm</p></div>
-          <div class="tl-field"><label>Lobe gauche</label><p>1,48 × 0,86 × 3,48 cm</p></div>
-          <div class="tl-field"><label>Isthme</label><p>0,16 cm (normal)</p></div>
-          <div class="tl-field"><label>Adénopathies / Axes vasculaires</label><p>Pas d'ADP. Axes vasculaires libres.</p></div>
-          <div class="tl-field full"><label>! Conclusion</label><p>Volume thyroïdien <span class="val-ok">normal</span>. Présence d'un <span class="val-high">kyste de 0,47 cm sur le lobe droit</span> — à surveiller. Ce kyste constitue une découverte nouvelle non documentée dans les examens antérieurs.</p></div>
-        </div>
-        <button class="bilan-toggle" onclick="toggleBilan(this)">
-          <span class="clip-icon">📎</span>
-          <span class="toggle-label">Voir le document source</span>
-          <span class="toggle-arrow">▼</span>
-        </button>
-        <div class="bilan-drawer">
-          <div class="bilan-drawer-inner">
-            <div class="bilan-doc-header">
-              <span class="bilan-doc-badge">Document A1</span>
-              <span class="bilan-doc-title">Échographie Thyroïdienne — Dr H. Delileche</span>
-              <span class="bilan-doc-meta">05/10/2024 · Samsung HS 40 · 16 MHz · 13 ans</span>
-            </div>
-            <div class="bilan-rows">
-              <div class="bilan-section-title">Mensurations</div>
-              <div class="bilan-row"><span class="bilan-row-label">Lobe droit</span><span class="bilan-row-val">1,03 × 1,01 × 2,80 cm</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Lobe gauche</span><span class="bilan-row-val">1,48 × 0,86 × 3,48 cm</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Isthme</span><span class="bilan-row-val val-ok">0,16 cm</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Volume thyroïdien</span><span class="bilan-row-val val-ok">Normal</span></div>
-              <div class="bilan-section-title">Lésion identifiée</div>
-              <div class="bilan-row"><span class="bilan-row-label">Kyste lobe droit</span><span class="bilan-row-val val-low">0,47 cm — à surveiller</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Adénopathies</span><span class="bilan-row-val val-ok">Absentes</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Axes vasculaires</span><span class="bilan-row-val val-ok">Libres</span></div>
-              <div class="bilan-conclusion"><strong>Conclusion :</strong> Volume thyroïdien normal. Kyste 0,47 cm lobe droit — surveillance échographique recommandée.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 13 -->
-    <div class="tl-entry" style="animation-delay:.41s">
-      <div class="tl-dot warn-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">Oct. 2025</span>
-          <span class="tl-badge badge-test">Bilan Complet</span>
-          <span class="tl-title-text">Bilan multi-spécialités — nouvelles découvertes (lithiase, anémie)</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>22/10/2025 — Échocardiographie (Dr BOUDJELLAL)</label><p>Anatomie normale. FE-VG : 70% OK. Pas d'HTAP. Péricarde sec. <strong>Échocardiographie 100% normale.</strong></p></div>
-          <div class="tl-field"><label>07/10/2025 — Écho abdominale (Dr L. BOUTAOUA)</label><p>Vésicule biliaire : présence de <strong>lithiase (calculs)</strong>. Aérocolie importante (+++). Foie, rate, reins, vessie : normaux.</p></div>
-          <div class="tl-field"><label>13/10/2025 — Médecine Interne (Dr L. BOUTAOUA)</label><p>Ac anti-cellules pariétales : <span class="val-high">&gt; 100,0 U/L (POSITIF)</span>. Confirmation. Dose Levothyrox : 175 µg. Hypothyroïdie congénitale "jamais bien équilibrée".</p></div>
-          <div class="tl-field"><label>Bilan hématologique (Oct. 2025)</label><p>Hémoglobine : <span class="val-low">10,3 g/dl</span> (↓). GR : <span class="val-low">4,38 ×10⁶/ml</span> (↓). TGMH : <span class="val-low">23,5 pg</span> (↓). Fer : <span class="val-low">40 µg/dl</span> (↓). Ferritine : 15,59 ng/ml (limite basse). Vit. B12 : 234 pg/ml. Ac anti-facteur intrinsèque : Négatif.</p></div>
-          <div class="tl-field"><label>30/11/2025 — Bilan ionique</label><p>Créatinine : 8,73 mg/l OK. K : 4,50 mmol/l OK. Na : 142,0 mmol/l OK.</p></div>
-          <div class="tl-field full"><label>02/11/2025 — Endocrinologie Pr DJIDEL</label><p>Augmentation du traitement : <strong>Levothyrox 100 µg × 2 comprimés/matin à jeun (200 µg/jour)</strong> + Magnésium B6 (1 cp/soir). TSH au 30/10/2025 : <span class="val-high">19,610 µUI/ml</span>.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 13b — NOUVEAU : Prescription Dr RAHEM 30/10/2025 -->
-    <div class="tl-entry" style="animation-delay:.425s">
-      <div class="tl-dot amber-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">30 Oct. 2025</span>
-          <span class="tl-badge badge-medication">Gastro-entérologie — Ordonnance</span>
-          <span class="tl-title-text">Dr Nasreddine RAHEM — Prescription gastro-entérologique (Lisinox, Nobac, Spasfon, Debridat)</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Médecin</label><p>Dr Nasreddine RAHEM — Gastro-entérologie</p></div>
-          <div class="tl-field"><label>Pharmacie</label><p>Bordj El Bahri</p></div>
-          <div class="tl-field full"><label>Traitements prescrits</label><p>
-            <strong>LISINOX 20 mg :</strong> 1 cp/jour (1 boîte) · <strong>NOBAC susp. :</strong> 1 c. à café 3×/jour (1 flacon) · <strong>SPASFON LYOC 80 mg :</strong> 1 cp 2×/jour (1 boîte) · <strong>DEBRIDAT susp. :</strong> 1 c. à café 3×/jour (1 boîte)
-          </p></div>
-        </div>
-        <button class="bilan-toggle" onclick="toggleBilan(this)">
-          <span class="clip-icon">📎</span>
-          <span class="toggle-label">Voir le document source</span>
-          <span class="toggle-arrow">▼</span>
-        </button>
-        <div class="bilan-drawer">
-          <div class="bilan-drawer-inner">
-            <div class="bilan-doc-header">
-              <span class="bilan-doc-badge">Document A2</span>
-              <span class="bilan-doc-title">Ordonnance — Gastro-entérologie · Dr N. RAHEM</span>
-              <span class="bilan-doc-meta">30/10/2025 · Pharmacie Bordj El Bahri</span>
-            </div>
-            <div class="bilan-rows">
-              <div class="bilan-section-title">Médicaments prescrits</div>
-              <div class="bilan-row"><span class="bilan-row-label">LISINOX 20 mg</span><span class="bilan-row-val">1 cp/jour</span><span class="bilan-row-norm">1 boîte</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">NOBAC susp.</span><span class="bilan-row-val">1 c. à café × 3/jour</span><span class="bilan-row-norm">1 flacon</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">SPASFON LYOC 80 mg</span><span class="bilan-row-val">1 cp × 2/jour</span><span class="bilan-row-norm">1 boîte</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">DEBRIDAT susp.</span><span class="bilan-row-val">1 c. à café × 3/jour</span><span class="bilan-row-norm">1 boîte</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 13c — NOUVEAU : FOGD + ANAPATH 05/11/2025 -->
-    <div class="tl-entry" style="animation-delay:.44s">
-      <div class="tl-dot warn-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">05 Nov. 2025</span>
-          <span class="tl-badge badge-test">FOGD + Anatomopathologie</span>
-          <span class="tl-title-text">Dr Hassen Khodja — Pan-gastrite (antrale micronodulaire + fundique atrophique) + lymphangiectasies duodénales</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Médecin</label><p>Dr Hassen Khodja — Gastro-entérologie</p></div>
-          <div class="tl-field"><label>Motif</label><p>Ac anti-cellules pariétales positifs, suivi hypothyroïdie.</p></div>
-          <div class="tl-field"><label>Conditions</label><p>Sous sédation.</p></div>
-          <div class="tl-field"><label>Œsophage</label><p><span class="val-ok">Sain.</span></p></div>
-          <div class="tl-field"><label>Estomac — Fundus</label><p>Hauteur des plis réduite, muqueuse à aspect <strong>atrophique</strong>. Biopsie réalisée (tube 02).</p></div>
-          <div class="tl-field"><label>Estomac — Antre</label><p>Muqueuse <strong>micronodulaire</strong>, grands plis pré-pyloriques. Biopsie réalisée (tube 01).</p></div>
-          <div class="tl-field"><label>Pylore / Bulbe</label><p>Centré, perméable. Bulbe sain.</p></div>
-          <div class="tl-field"><label>Duodénum (D1, D2)</label><p><strong>Lymphangiectasies</strong> identifiées → biopsies systématiques (tube 03).</p></div>
-          <div class="tl-field full"><label>! Conclusion endoscopique</label><p><strong>Pan-gastrite</strong> : gastrite antrale micronodulaire + gastrite fundique atrophique. Lymphangiectasies duodénales avec biopsies systématiques envoyées en anatomopathologie. Demande ANAPATH réf. HU28KJ.</p></div>
-        </div>
-        <button class="bilan-toggle" onclick="toggleBilan(this)">
-          <span class="clip-icon">📎</span>
-          <span class="toggle-label">Voir le document source</span>
-          <span class="toggle-arrow">▼</span>
-        </button>
-        <div class="bilan-drawer">
-          <div class="bilan-drawer-inner">
-            <div class="bilan-doc-header">
-              <span class="bilan-doc-badge">Document A3</span>
-              <span class="bilan-doc-title">FOGD — Fibroscopie oeso-gastro-duodénale</span>
-              <span class="bilan-doc-meta">05/11/2025 · Dr Hassen Khodja · Sous sédation</span>
-            </div>
-            <div class="bilan-rows">
-              <div class="bilan-row"><span class="bilan-row-label">Motif</span><span class="bilan-row-val">Ac anti-pariétaux (+), suivi hypothyroïdie</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Œsophage</span><span class="bilan-row-val val-ok">Sain</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Lac muqueux gastrique</span><span class="bilan-row-val val-ok">Clair, abondance normale</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Fundus</span><span class="bilan-row-val val-low">Plis réduits, muqueuse atrophique → Bx tube 02</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Antre</span><span class="bilan-row-val val-low">Micronodulaire, grands plis pré-pyloriques → Bx tube 01</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Angulus / Sous-cardial</span><span class="bilan-row-val val-ok">Sains</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Pylore</span><span class="bilan-row-val val-ok">Centré, perméable</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Bulbe</span><span class="bilan-row-val val-ok">Sain</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Duodénum D1-D2</span><span class="bilan-row-val val-low">Lymphangiectasies → Bx systématique tube 03</span></div>
-              <div class="bilan-conclusion"><strong>Conclusion :</strong> Pan-gastrite (antrale micronodulaire + fundique atrophique). Lymphangiectasies duodénales. Biopsies → ANAPATH réf. HU28KJ.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 13d — NOUVEAU : Histopathologie 09/11/2025 -->
-    <div class="tl-entry" style="animation-delay:.455s">
-      <div class="tl-dot active-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">09 Nov. 2025</span>
-          <span class="tl-badge badge-test">Histopathologie — Résultat</span>
-          <span class="tl-title-text">Dr Boucebha Abdelkader — Pan-gastrite chronique modérée · Pas d'atrophie vraie · H. pylori négatif · Muqueuse duodénale normale</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Pathologiste</label><p>Dr Boucebha Abdelkader — Anatomopathologie. Réf. HU28KJ. 3 tubes : Tube 1 (1 bx / antre), Tube 2 (4 bx / fundus), Tube 3 (3 bx / duodénum).</p></div>
-          <div class="tl-field"><label>Muqueuse duodénale (Tube 3)</label><p>Villosités <span class="val-ok">conservées</span>. Lymphocytose intraépithéliale ~30%. Chorion œdémateux, légère réaction lymphoplasmocytaire. <span class="val-ok">Pas de giardiase.</span></p></div>
-          <div class="tl-field"><label>Muqueuse antro-pylorique (Tube 1)</label><p>Masse glandulaire normale. Infiltrat lymphoplasmocytaire chronique (diffus et folliculaire). 3 follicules lymphoïdes hyperplasiques + éosinophiles ++.</p></div>
-          <div class="tl-field"><label>Muqueuse fundique (Tube 2)</label><p>Masse glandulaire réduite, structures différenciées, cellules pariétales présentes. Infiltrat chronique diffus léger. <span class="val-ok">Pas de métaplasie ni de kystes.</span></p></div>
-          <div class="tl-field full"><label>! Conclusion histopathologique</label><p>
-            <strong>Muqueuse duodénale :</strong> <span class="val-ok">Normale — pas d'atrophie villositaire.</span><br>
-            <strong>Gastrite :</strong> Pan-gastrite chronique modérée, sans signes d'atrophie vraie (prédominance antrale). Activité légère. <span class="val-ok">H. pylori négatif.</span> Pas de métaplasie, dysplasie ni malignité.<br>
-            <strong>Signification :</strong> Ce résultat confirme une gastrite à prédominance auto-immune plutôt qu'infectieuse — cohérent avec les Ac anti-pariétaux très positifs. La négativité H. pylori sur biopsies valide les doutes des spécialistes sur le traitement antibiotique antérieur.
-          </p></div>
-        </div>
-        <button class="bilan-toggle" onclick="toggleBilan(this)">
-          <span class="clip-icon">📎</span>
-          <span class="toggle-label">Voir le document source</span>
-          <span class="toggle-arrow">▼</span>
-        </button>
-        <div class="bilan-drawer">
-          <div class="bilan-drawer-inner">
-            <div class="bilan-doc-header">
-              <span class="bilan-doc-badge">Document A4</span>
-              <span class="bilan-doc-title">Rapport Histopathologique — Dr Boucebha Abdelkader</span>
-              <span class="bilan-doc-meta">09/11/2025 · Réf. HU28KJ · 3 tubes</span>
-            </div>
-            <div class="bilan-rows">
-              <div class="bilan-section-title">Muqueuse Duodénale — Tube 3 (3 bx)</div>
-              <div class="bilan-row"><span class="bilan-row-label">Villosités</span><span class="bilan-row-val val-ok">Conservées</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Lymphocytose intraépithéliale</span><span class="bilan-row-val">~30 %</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Chorion</span><span class="bilan-row-val">Œdémateux, légère réaction lymphoplasmocytaire</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Giardiase</span><span class="bilan-row-val val-ok">Absente</span></div>
-              <div class="bilan-section-title">Muqueuse Antro-pylorique — Tube 1 (1 bx)</div>
-              <div class="bilan-row"><span class="bilan-row-label">Masse glandulaire</span><span class="bilan-row-val val-ok">Normale</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Infiltrat lymphoplasmocytaire</span><span class="bilan-row-val">Chronique, diffus et folliculaire</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Follicules lymphoïdes</span><span class="bilan-row-val val-low">3 hyperplasiques</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Éosinophiles</span><span class="bilan-row-val val-low">++ présents</span></div>
-              <div class="bilan-section-title">Muqueuse Fundique — Tube 2 (4 bx)</div>
-              <div class="bilan-row"><span class="bilan-row-label">Masse glandulaire</span><span class="bilan-row-val val-low">Réduite</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Cellules pariétales</span><span class="bilan-row-val val-ok">Présentes</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Structures</span><span class="bilan-row-val val-ok">Différenciées</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Infiltrat chronique</span><span class="bilan-row-val">Diffus, léger</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Métaplasie / Kystes</span><span class="bilan-row-val val-ok">Absents</span></div>
-              <div class="bilan-section-title">Conclusions Globales</div>
-              <div class="bilan-row"><span class="bilan-row-label">Atrophie villositaire duodénale</span><span class="bilan-row-val val-ok">Absente</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Type de gastrite</span><span class="bilan-row-val">Pan-gastrite chronique modérée</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Atrophie vraie</span><span class="bilan-row-val val-ok">Absente</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">H. pylori (biopsie)</span><span class="bilan-row-val val-ok">NÉGATIF</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Métaplasie / Dysplasie / Malignité</span><span class="bilan-row-val val-ok">Absentes</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 13e — NOUVEAU : Prescription Pr. YAGOUBI 26/11/2025 -->
-    <div class="tl-entry" style="animation-delay:.47s">
-      <div class="tl-dot active-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">26 Nov. 2025</span>
-          <span class="tl-badge badge-medication">Gastro-pédiatrie — Ordonnance</span>
-          <span class="tl-title-text">Pr. Abdelghani YAGOUBI — Picoprep + Forlax 3,5 sachets/jour</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Médecin</label><p>Pr. Abdelghani YAGOUBI — Gastro-entérologie Pédiatrique</p></div>
-          <div class="tl-field"><label>Contexte</label><p>Prescription post-FOGD (Dr Khodja, 05/11/2025) — prise en charge de la constipation chronique documentée.</p></div>
-          <div class="tl-field"><label>PICOPREP sachets</label><p>1 sachet/jour + 1 L d'eau — pendant 4 jours (préparation/nettoyage colique).</p></div>
-          <div class="tl-field"><label>FORLAX 10G</label><p>3,5 sachets/jour — pendant 1 mois.</p></div>
-        </div>
-        <button class="bilan-toggle" onclick="toggleBilan(this)">
-          <span class="clip-icon">📎</span>
-          <span class="toggle-label">Voir le document source</span>
-          <span class="toggle-arrow">▼</span>
-        </button>
-        <div class="bilan-drawer">
-          <div class="bilan-drawer-inner">
-            <div class="bilan-doc-header">
-              <span class="bilan-doc-badge">Document A5</span>
-              <span class="bilan-doc-title">Ordonnance — Pr. Abdelghani YAGOUBI (Gastro-pédiatrie)</span>
-              <span class="bilan-doc-meta">26/11/2025</span>
-            </div>
-            <div class="bilan-rows">
-              <div class="bilan-row"><span class="bilan-row-label">PICOPREP sachets</span><span class="bilan-row-val">1 sachet/jour + 1 L eau</span><span class="bilan-row-norm">4 jours</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">FORLAX 10G</span><span class="bilan-row-val">3,5 sachets/jour</span><span class="bilan-row-norm">1 mois</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 13f — NOUVEAU : Orthopédie 27/12/2025 -->
-    <div class="tl-entry" style="animation-delay:.485s">
-      <div class="tl-dot amber-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">27 Déc. 2025</span>
-          <span class="tl-badge badge-medication">Orthopédie — Ordonnance</span>
-          <span class="tl-title-text">Dr MOUALEK Fayçal — Traitement anti-inflammatoire pour douleurs articulaires (Solupred, Clofenal, Dolyp, Tauflex)</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Médecin</label><p>Dr MOUALEK Fayçal — Chirurgie Orthopédique, Khemis Miliana</p></div>
-          <div class="tl-field"><label>Pharmacie</label><p>ALOUANE MED LAMINE, Khemis Miliana</p></div>
-          <div class="tl-field"><label>Contexte</label><p>Poursuite du suivi des douleurs articulaires chroniques (genoux, douleurs diffuses) dans le contexte d'une hypothyroïdie mal contrôlée.</p></div>
-          <div class="tl-field full"><label>Traitements prescrits</label><p>
-            <strong>Solupred 20 mg :</strong> 3 cp/matin pendant 5 jours · <strong>Clofenal 25 mg :</strong> 1 boîte · <strong>Dolyp 500 mg :</strong> 1 cp × 2/jour (2 boîtes) · <strong>Tauflex cap. :</strong> 1 cp × 2/jour (2 boîtes)
-          </p></div>
-          <div class="tl-field full"><label>! Note clinique</label><p>La prescription de corticoïdes (Solupred) et d'AINS (Clofenal) doit être mise en relation avec la gastrite chronique documentée (FOGD 05/11/2025) — risque gastrique à surveiller. Ces médicaments sont aujourd'hui arrêtés (traitement court terme).</p></div>
-        </div>
-        <button class="bilan-toggle" onclick="toggleBilan(this)">
-          <span class="clip-icon">📎</span>
-          <span class="toggle-label">Voir le document source</span>
-          <span class="toggle-arrow">▼</span>
-        </button>
-        <div class="bilan-drawer">
-          <div class="bilan-drawer-inner">
-            <div class="bilan-doc-header">
-              <span class="bilan-doc-badge">Document A6</span>
-              <span class="bilan-doc-title">Ordonnance Orthopédique — Dr MOUALEK Fayçal</span>
-              <span class="bilan-doc-meta">27/12/2025 · Pharmacie ALOUANE MED LAMINE · Khemis Miliana</span>
-            </div>
-            <div class="bilan-rows">
-              <div class="bilan-section-title">Médicaments prescrits</div>
-              <div class="bilan-row"><span class="bilan-row-label">SOLUPRED 20 mg</span><span class="bilan-row-val">3 cp/matin</span><span class="bilan-row-norm">5 jours</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">CLOFENAL 25 mg</span><span class="bilan-row-val">1 boîte</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">DOLYP 500 mg</span><span class="bilan-row-val">1 cp × 2/jour</span><span class="bilan-row-norm">2 boîtes</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">TAUFLEX cap.</span><span class="bilan-row-val">1 cp × 2/jour</span><span class="bilan-row-norm">2 boîtes</span></div>
-              <div class="bilan-conclusion"><strong>Statut :</strong> Traitement court terme — aujourd'hui arrêté.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 13g — NOUVEAU : Prescription Pr. YAGOUBI 25/01/2026 -->
-    <div class="tl-entry" style="animation-delay:.50s">
-      <div class="tl-dot active-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">25 Jan. 2026</span>
-          <span class="tl-badge badge-medication">Gastro-pédiatrie — Ordonnance</span>
-          <span class="tl-title-text">Pr. Abdelghani YAGOUBI — Forlax 4 sachets/jour pendant 3 mois</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Médecin</label><p>Pr. Abdelghani YAGOUBI — Gastro-entérologie Pédiatrique</p></div>
-          <div class="tl-field"><label>Prescription</label><p><strong>FORLAX 10G :</strong> 4 sachets/jour pendant 3 mois.</p></div>
-          <div class="tl-field full"><label>Signification</label><p>Augmentation de la dose de Forlax par rapport à l'ordonnance du 26/11/2025 (3,5 sachets → 4 sachets/jour). Cette prescription est la source de la dose actuelle de Forlax 40 g/j mentionnée dans le traitement en cours. Prescrit par Pr. YAGOUBI — à distinguer de l'ordonnance antérieure attribuée à Dr. Yacoubi Noureddine dans les versions précédentes de ce dossier.</p></div>
-        </div>
-        <button class="bilan-toggle" onclick="toggleBilan(this)">
-          <span class="clip-icon">📎</span>
-          <span class="toggle-label">Voir le document source</span>
-          <span class="toggle-arrow">▼</span>
-        </button>
-        <div class="bilan-drawer">
-          <div class="bilan-drawer-inner">
-            <div class="bilan-doc-header">
-              <span class="bilan-doc-badge">Document A7</span>
-              <span class="bilan-doc-title">Ordonnance — Pr. Abdelghani YAGOUBI (Gastro-pédiatrie)</span>
-              <span class="bilan-doc-meta">25/01/2026</span>
-            </div>
-            <div class="bilan-rows">
-              <div class="bilan-row"><span class="bilan-row-label">FORLAX 10G</span><span class="bilan-row-val">4 sachets/jour</span><span class="bilan-row-norm">3 mois</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 14 -->
-    <div class="tl-entry" style="animation-delay:.53s">
-      <div class="tl-dot warn-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">Fin 2025 – Début 2026</span>
-          <span class="tl-badge badge-episode">Gastro-entérologie</span>
-          <span class="tl-title-text">Deux diagnostics contradictoires — H. pylori (biopsie +) vs trouble colique · Histologie finalement H. pylori négatif</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Piste 1 — Dr BOUHEDDA / Clinique Mitidja, Blida</label><p>FOGD avec biopsie gastrique → <strong>Helicobacter pylori + gastrite</strong> confirmés à l'endoscopie initiale. Traitement antibiotique de 14 jours administré → <span class="val-high">aggravation des douleurs corporelles et céphalées.</span></p></div>
-          <div class="tl-field"><label>! Résultat ANAPATH (Dr Boucebha, 09/11/2025)</label><p>Histologie formelle : <span class="val-ok"><strong>H. pylori négatif sur biopsies.</strong></span> Pan-gastrite chronique modérée sans atrophie vraie. Confirme la composante auto-immune — valide l'échec de l'antibiothérapie.</p></div>
-          <div class="tl-field"><label>Piste 2 — Pr. Abdelghani YAGOUBI (Gastro-pédiatrie)</label><p>Suivi gastro-pédiatrique — FOGD (Dr Hassen Khodja, 05/11/2025). Prescription Forlax progressive (26/11/2025 : 3,5 sachets/j → 25/01/2026 : 4 sachets/j pendant 3 mois).</p></div>
-          <div class="tl-field full"><label>! Régime alimentaire imposé (ancienne piste)</label><p>Interdiction totale : <strong>bananes, chocolat, riz, carottes</strong> — non validée par les autres spécialistes du dossier. À réévaluer.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 15 -->
-    <div class="tl-entry" style="animation-delay:.56s">
-      <div class="tl-dot warn-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">Avr. 2026 — Actuel</span>
-          <span class="tl-badge badge-episode">Crise Active — Urgente</span>
-          <span class="tl-title-text">Céphalées sévères quotidiennes + photophobie + phonophobie + troubles visuels</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Céphalées</label><p>Continues 24h/24 depuis avril 2026. Insensibles au Paracétamol (Doliprane). Fluctuent en intensité mais présentes jour et nuit.</p></div>
-          <div class="tl-field"><label>Troubles visuels</label><p>Vision floue intermittente. Taches blanches/grisâtres. Écriture qui paraît soudainement très petite. Nécessite changement de position et d'éclairage pour retrouver la netteté.</p></div>
-          <div class="tl-field"><label>Photophobie</label><p>Extrême — ne supporte aucune lumière, demande l'obscurité totale.</p></div>
-          <div class="tl-field"><label>Phonophobie</label><p>Extrême — ne supporte aucun bruit : voix, motos, même le chant des oiseaux.</p></div>
-          <div class="tl-field"><label>Troubles mnésiques</label><p>Oublis fréquents et rapides. Distraction facile, concentration difficile à maintenir.</p></div>
-          <div class="tl-field"><label>Troubles comportementaux</label><p>Irritabilité marquée et colère fréquente (état quasi-permanent). Comportement régressif — agit encore comme un enfant en bas âge malgré ses 15 ans. Non évalués par un spécialiste à ce jour.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 16 -->
-    <div class="tl-entry" style="animation-delay:.59s">
-      <div class="tl-dot warn-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">28 Avr. 2026</span>
-          <span class="tl-badge badge-specialist">ORL — Conclusion Urgente</span>
-          <span class="tl-title-text">Naso-pharyngo-laryngoscopie — hypertrophie cornets + RGO + scanner cérébral demandé</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Médecin</label><p>Dr Ayouche M.A. — ORL, Khemis Miliana</p></div>
-          <div class="tl-field"><label>Acte ORL réalisé</label><p>Retrait d'un bouchon de cérumen dans l'oreille gauche → perte auditive et douleurs résolues. Tympans intacts, légère calcification mineure.</p></div>
-          <div class="tl-field"><label>Fosses nasales</label><p><strong>Hypertrophie obstructive des cornets inférieurs (++++)</strong>. Pied de cloison nasale bilatéral. Muqueuse congestive.</p></div>
-          <div class="tl-field"><label>Larynx / RGO</label><p><strong>Aryténoïdes rouges (++) — signe clinique indirect d'un Reflux Gastro-Œsophagien</strong>. Cordes vocales saines et mobiles. Épiglotte normale.</p></div>
-          <div class="tl-field"><label>Traitement ORL (7 jours)</label><p>Essai pour réduire l'inflammation nasale. <span class="val-high">Échec total.</span> Cautérisation des cornets évoquée.</p></div>
-          <div class="tl-field full"><label>! Conclusion Finale Dr Ayouche — Scanner Cérébral URGENT</label><p>Devant l'échec des antalgiques, les troubles visuels, la photophobie/phonophobie et l'historique endocrinien complexe, le Dr Ayouche insiste : <strong>Scanner cérébral (TDM) urgent avec ciblage spécifique de la glande pituitaire</strong> — pour écarter un processus expansif (ex : adénome hypophysaire).</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 17 -->
-    <div class="tl-entry" style="animation-delay:.62s">
-      <div class="tl-dot warn-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">10 Mai 2026</span>
-          <span class="tl-badge badge-specialist">Neurologie — Orientations Urgentes</span>
-          <span class="tl-title-text">Dr Sennia Imane Amel — Céphalées en casque rebelles + flou visuel bilatéral → Angio-IRM + Fond d'œil prescrits</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Médecin</label><p>Dr Sennia Imane Amel — Neurologie, Khemis Miliana</p></div>
-          <div class="tl-field"><label>Contexte clinique</label><p>Hypothyroïdie congénitale. Céphalées en casque rebelles + flou visuel bilatéral.</p></div>
-          <div class="tl-field"><label>Prescription 1 — Imagerie</label><p><strong>Angio-IRM cérébrale</strong> avec <strong>séquence hypophysaire</strong>.</p></div>
-          <div class="tl-field"><label>Prescription 2 — Ophtalmologie</label><p><strong>Fond d'œil (FO)</strong> — réalisé le jour même (10/05/2026, Dr MISRAOUI).</p></div>
-          <div class="tl-field"><label>Prescription antalgique</label><p>Paracétamol 1000 mg. Antalgiques palier 2 <strong>refusés</strong> — risque gastrique contre-indiqué.</p></div>
-          <div class="tl-field full"><label>Statut des investigations</label><p>Fond d'œil réalisé le 10/05/2026 (Dr MISRAOUI) — sans anomalie, pas d'œdème papillaire. Angio-IRM cérébrale réalisée le 11/05/2026 (Dr LEKHAL) — légère hypotrophie hypophysaire confirmée.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 18 -->
-    <div class="tl-entry" style="animation-delay:.635s">
-      <div class="tl-dot ok-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">10 Mai 2026</span>
-          <span class="tl-badge badge-test">Ophtalmologie — Résultat</span>
-          <span class="tl-title-text">Dr A. MISRAOUI — Fond d'œil bilatéral sans anomalie · Pas d'œdème papillaire</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Médecin</label><p>Dr A. MISRAOUI — Ophtalmologie, Khemis Miliana</p></div>
-          <div class="tl-field"><label>Acuité visuelle</label><p>Œil droit (OD) : <span class="val-low">8/10</span> · Œil gauche (OG) : <span class="val-ok">10/10</span></p></div>
-          <div class="tl-field"><label>Fond d'œil (FO ODG)</label><p><span class="val-ok">Sans anomalies.</span> <strong>Pas d'œdème papillaire</strong> observé ce jour — signe direct d'HTIC absent à ce stade.</p></div>
-          <div class="tl-field full"><label>Interprétation clinique</label><p>L'absence d'œdème papillaire ce jour n'exclut pas formellement une HTIC débutante ou intermittente. L'Angio-IRM reste indispensable. L'acuité visuelle légèrement réduite à droite (8/10) mérite suivi.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 19 -->
-    <div class="tl-entry" style="animation-delay:.65s">
-      <div class="tl-dot amber-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">10 Mai 2026</span>
-          <span class="tl-badge badge-specialist">Immunologie — Gastrite Auto-Immune</span>
-          <span class="tl-title-text">Dr Hamraoui — Anticorps thyroïdiens + gastrite auto-immune distincte de l'H. pylori + rôle du stress (BEM)</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Médecin</label><p>Dr Hamraoui — Immunologie, Faculté de Blida</p></div>
-          <div class="tl-field"><label>Bilan immunologique prescrit</label><p>Prélèvement sur tube sec : <span class="val-high">Anti-TPO</span> et <span class="val-high">Anti-TG</span> — pour caractériser la composante auto-immune thyroïdienne.</p></div>
-          <div class="tl-field"><label>Facteur déclenchant — Stress BEM</label><p>Stress extrême (maladie chronique + charge scolaire BEM) susceptible de déclencher ou d'exacerber des poussées auto-immunes.</p></div>
-          <div class="tl-field full"><label>! Clarification diagnostique majeure — Gastrite Auto-Immune vs H. pylori</label><p>Le Dr Hamraoui précise que le patient présente très probablement une <strong>gastrite auto-immune</strong> (Ac anti-cellules pariétales positifs depuis 2021, absence de facteur intrinsèque), pathologie fondamentalement différente de l'infection à H. pylori. Ce diagnostic est maintenant confirmé par l'histologie négative H. pylori (Dr Boucebha, 09/11/2025).</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 20 -->
-    <div class="tl-entry" style="animation-delay:.665s">
-      <div class="tl-dot warn-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">11 Mai 2026</span>
-          <span class="tl-badge badge-test">Angio-IRM Cérébrale — Résultat</span>
-          <span class="tl-title-text">Dr LEKHAL M. — Légère hypotrophie hypophysaire · Pas d'HTIC · Vascularisation cérébrale normale</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Centre</label><p>Centre d'Imagerie Médicale Dr. Lekhal M.</p></div>
-          <div class="tl-field"><label>Technique</label><p>Séquences IRM standard + Angio-MR 3D TOF + séquences 3D T1 avec injection de gadolinium, centrées sur la glande hypophyse.</p></div>
-          <div class="tl-field"><label>Système vasculaire — Artères</label><p><span class="val-ok">Normal.</span> Axes cervicaux perméables. Polygone de Willis sans anomalie.</p></div>
-          <div class="tl-field"><label>Système vasculaire — Veines &amp; Sinus</label><p><span class="val-ok">Normal.</span> Pas de thrombose.</p></div>
-          <div class="tl-field"><label>Parenchyme cérébral</label><p><span class="val-ok">Normal.</span> Système ventriculaire non dilaté. Pas de déplacement de la ligne médiane.</p></div>
-          <div class="tl-field"><label>! Glande hypophyse — Constatation principale</label><p>Hauteur mesurée entre <span class="val-high">4 mm et 4,5 mm</span> — <strong>légèrement réduite</strong> (norme : 6 à 7 mm). Tige pituitaire en place. Sinus caverneux libres. <strong>Légère hypotrophie hypophysaire.</strong></p></div>
-          <div class="tl-field"><label>Pression intracrânienne</label><p><span class="val-ok">Pas de signe d'HTIC.</span></p></div>
-          <div class="tl-field full"><label>! Recommandation du radiologue</label><p><strong>Confrontation clinique avec les données hormonales indispensable.</strong> L'hypotrophie hypophysaire peut être à l'origine d'une <strong>hypothyroïdie d'origine centrale (secondaire)</strong> — hypothèse déjà soulevée dès 2014. Consultation endocrinologique spécialisée requise en urgence.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 21 -->
-    <div class="tl-entry" style="animation-delay:.68s">
-      <div class="tl-dot amber-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">11 Mai 2026</span>
-          <span class="tl-badge badge-test">CHU Blida — Immunologie</span>
-          <span class="tl-title-text">Dr H. ROUAGHI — Bilan auto-immun complet : TS + EDP · Synthèse clinique multi-systémique</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Médecin</label><p>Dr H. ROUAGHI — Immunologie Médicale, CHU Blida</p></div>
-          <div class="tl-field"><label>Prélèvement</label><p>Bon de réception confirmé — prélèvement sanguin 11/05/2026 au CHU de Blida (N° quittance 32250).</p></div>
-          <div class="tl-field"><label>Examens prescrits</label><p><strong>TS</strong> (Tests de Spécificité auto-immune) et <strong>EDP</strong> (Électrophorèse Des Protéines).</p></div>
-          <div class="tl-field full"><label>Signification clinique</label><p>Ces analyses complètent le bilan auto-immun initié par Dr Hamraoui (Anti-TPO / Anti-TG, 10/05/2026). L'EDP permettra de détecter d'éventuelles anomalies des protéines sériques. Résultats en attente.</p></div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 22 -->
-    <div class="tl-entry" style="animation-delay:.695s">
-      <div class="tl-dot active-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">12 Mai 2026</span>
-          <span class="tl-badge badge-specialist">Neurologie — Orientation</span>
-          <span class="tl-title-text">Dr Sennia Imane Amel — Courrier d'orientation médicale spécialisée</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Médecin</label><p>Dr Sennia Imane Amel (Épouse TAANE) — Neurologie, Khemis Miliana</p></div>
-          <div class="tl-field"><label>Observations cliniques</label><p>Hypothyroïdie congénitale · Gastrite · Céphalées en casque (type tension).</p></div>
-          <div class="tl-field"><label>Résultats d'examens joints</label><p>Fond d'œil : sans anomalie. Angio-IRM cérébrale : <span class="val-high">légère atrophie hypophysaire</span> confirmée.</p></div>
-          <div class="tl-field full"><label>Signification clinique</label><p>Ce courrier formalise le parcours de soin. Il consolide la nécessité d'une évaluation endocrinologique spécialisée pour confronter les données hormonales à l'hypotrophie hypophysaire objectivée.</p></div>
-        </div>
-        <button class="bilan-toggle" onclick="toggleBilan(this)">
-          <span class="clip-icon">📎</span>
-          <span class="toggle-label">Voir le document source</span>
-          <span class="toggle-arrow">▼</span>
-        </button>
-        <div class="bilan-drawer">
-          <div class="bilan-drawer-inner">
-            <div class="bilan-doc-header">
-              <span class="bilan-doc-badge">Document 1000007895</span>
-              <span class="bilan-doc-title">Courrier d'orientation médicale — Dr Sennia Imane Amel (Neurologue)</span>
-              <span class="bilan-doc-meta">12/05/2026 · Khemis Miliana, W. Aïn Defla</span>
-            </div>
-            <div class="bilan-rows">
-              <div class="bilan-row"><span class="bilan-row-label">Médecin</span><span class="bilan-row-val">Dr Sennia Imane Amel (Épouse TAANE)</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">N° Ordre</span><span class="bilan-row-val">44/536</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Patient</span><span class="bilan-row-val">ESSAIDI Youcef · 15 ans · 03/02/2011</span></div>
-              <div class="bilan-section-title">Observations cliniques</div>
-              <div class="bilan-row"><span class="bilan-row-label">Hypothyroïdie congénitale</span><span class="bilan-row-val val-high">Confirmée</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Gastrite</span><span class="bilan-row-val val-high">Confirmée</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Céphalées en casque</span><span class="bilan-row-val val-high">Type tension — persistantes</span></div>
-              <div class="bilan-section-title">Résultats d'examens</div>
-              <div class="bilan-row"><span class="bilan-row-label">Fond d'œil (FO)</span><span class="bilan-row-val val-ok">Sans anomalie</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Angio-IRM cérébrale</span><span class="bilan-row-val val-high">Légère atrophie hypophysaire</span></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 23 -->
-    <div class="tl-entry" style="animation-delay:.71s">
-      <div class="tl-dot active-dot"></div>
-      <div class="tl-card">
-        <div class="tl-top">
-          <span class="tl-year">12 Mai 2026</span>
-          <span class="tl-badge badge-test">Endocrinologie — Prescription Biologique</span>
-          <span class="tl-title-text">Dr BOUHEDDA Rédha — Bilan thyroïdien &amp; hormonal complet prescrit (TSH, PTH, FSH, LH, Prolactine, Cortisol, ACTH, Testostérone, Vit. D, IGF1…)</span>
-        </div>
-        <div class="tl-details">
-          <div class="tl-field"><label>Médecin</label><p>Dr BOUHEDDA Rédha — Diabétologie-Endocrinologie, Khemis Miliana</p></div>
-          <div class="tl-field"><label>Examens prescrits — Bilan thyroïdien</label><p>TSH · Calcémie · Phosphorémie · Taux de Protides · PTH (Parathormone)</p></div>
-          <div class="tl-field"><label>Examens prescrits — Axe hypophysaire</label><p><span class="val-high">FSH · LH · Prolactine · Cortisol · ACTH · Testostérone</span></p></div>
-          <div class="tl-field"><label>Examens complémentaires</label><p><span class="val-high">Vitamine D · IGF-1 (Facteur de Croissance)</span></p></div>
-          <div class="tl-field full"><label>Signification clinique</label><p>Bilan capital pour confronter les données biologiques à l'hypotrophie hypophysaire confirmée par l'Angio-IRM (11/05/2026). Le dosage de FSH, LH, Prolactine, Cortisol, ACTH et Testostérone explorera l'intégrité fonctionnelle de l'axe hypothalamo-hypophysaire. L'IGF-1 évaluera l'axe somatotrope (GH). Résultats en attente.</p></div>
-        </div>
-        <button class="bilan-toggle" onclick="toggleBilan(this)">
-          <span class="clip-icon">📎</span>
-          <span class="toggle-label">Voir le document source</span>
-          <span class="toggle-arrow">▼</span>
-        </button>
-        <div class="bilan-drawer">
-          <div class="bilan-drawer-inner">
-            <div class="bilan-doc-header">
-              <span class="bilan-doc-badge">Document 1000007899</span>
-              <span class="bilan-doc-title">Prescription d'examens biologiques — Dr BOUHEDDA Rédha (Endocrinologue)</span>
-              <span class="bilan-doc-meta">12/05/2026 · Khemis Miliana, W. Aïn Defla</span>
-            </div>
-            <div class="bilan-rows">
-              <div class="bilan-row"><span class="bilan-row-label">Médecin</span><span class="bilan-row-val">Dr BOUHEDDA Rédha · N° Ordre : 4335</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Patient</span><span class="bilan-row-val">ESSAIDI Youcef · 15 ans · 03/02/2011</span></div>
-              <div class="bilan-section-title">Bilan Thyroïdien</div>
-              <div class="bilan-row"><span class="bilan-row-label">TSH</span><span class="bilan-row-val">En attente</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Calcémie</span><span class="bilan-row-val">En attente</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Phosphorémie</span><span class="bilan-row-val">En attente</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Taux de Protides</span><span class="bilan-row-val">En attente</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">PTH (Parathormone)</span><span class="bilan-row-val">En attente</span></div>
-              <div class="bilan-section-title">Bilan Hormonal — Axe Hypophysaire !</div>
-              <div class="bilan-row"><span class="bilan-row-label">FSH</span><span class="bilan-row-val">En attente</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">LH</span><span class="bilan-row-val">En attente</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Prolactine</span><span class="bilan-row-val">En attente</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Cortisol</span><span class="bilan-row-val">En attente</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">ACTH</span><span class="bilan-row-val">En attente</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">Testostérone</span><span class="bilan-row-val">En attente</span></div>
-              <div class="bilan-section-title">Examens Complémentaires</div>
-              <div class="bilan-row"><span class="bilan-row-label">Vitamine D</span><span class="bilan-row-val">En attente</span><span class="bilan-row-norm">Dernière valeur : 20,3 ng/ml (2021 — insuffisante)</span></div>
-              <div class="bilan-row"><span class="bilan-row-label">IGF-1 (Facteur de Croissance)</span><span class="bilan-row-val">En attente</span><span class="bilan-row-norm">Axe somatotrope (GH)</span></div>
-              <div class="bilan-conclusion"><strong>Résultats en attente.</strong> Essentiels pour évaluer l'intégrité fonctionnelle de l'axe hypothalamo-hypophysaire.</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
 
   </div><!-- /timeline -->
 
@@ -1256,6 +1694,9 @@
         <tr><td>12/02/2025</td><td class="val-high">100</td><td>8,91</td><td>175 µg</td><td class="val-high">Non contrôlé</td></tr>
         <tr><td>30/10/2025</td><td class="val-high">19,610</td><td>—</td><td>175 µg</td><td class="val-high">Toujours élevé</td></tr>
         <tr><td>02/11/2025</td><td>—</td><td>—</td><td><strong>200 µg</strong></td><td>Augmentation dose</td></tr>
+        <tr><td>29/01/2026</td><td class="val-ok">4,240</td><td>—</td><td>200 µg</td><td class="val-ok">Dans la norme !</td></tr>
+        <tr><td>13/05/2026</td><td class="val-high">19,250</td><td>—</td><td>200 µg</td><td class="val-high">Déséquilibre sévère</td></tr>
+        <tr><td>13/05/2026</td><td>—</td><td>—</td><td><strong>225 µg</strong></td><td>Augmentation dose (Dr BOUHEDDA)</td></tr>
       </tbody>
     </table>
     </div>
@@ -1273,7 +1714,12 @@
       <span class="pill-tag badge-active">Actif</span>
       <span class="pill-main">Hypothyroïdie congénitale — difficile à équilibrer</span>
     </div>
-    <div class="pill-sub">Suivi par Pr. K.F. DJIDEL (CMC Kouba) depuis 2011. Dose actuelle : <strong>Levothyrox 200 µg/jour</strong> (depuis Nov. 2025). Historique de TSH extrêmement instable (pic : 751 700 µUI/ml). Possible origine centrale suspectée dès 2014 — confirmée par légère hypotrophie hypophysaire (IRM, 11/05/2026). Contrôle TSH post-ajustement à prévoir. Kyste lobe droit 0,47 cm découvert à l'échographie du 05/10/2024 — à surveiller.</div>
+    <div class="pill-sub">Suivi par Pr. K.F. DJIDEL (CMC Kouba) depuis 2011. Dose actuelle : <strong>Levothyrox 225 µg/jour</strong>
+ (depuis 13/05/2026, Dr BOUHEDDA). Précédente dose : 200 µg (Nov. 2025).
+ Historique de TSH extrêmement instable (pic : 751 700 µUI/ml). Possible
+ origine centrale suspectée dès 2014 — confirmée par légère hypotrophie
+hypophysaire (IRM, 11/05/2026). Prise en charge spécialisée en cours
+(référence Prof. Azzouz, Hôpital Bainem).</div>
   </div>
 
   <div class="pill-card">
@@ -1281,7 +1727,10 @@
       <span class="pill-tag badge-active">Actif — Urgent !</span>
       <span class="pill-main">Syndrome céphalalgique sévère + troubles neurologiques / visuels</span>
     </div>
-    <div class="pill-sub">Céphalées en casque persistantes + flou visuel bilatéral. Fond d'œil 10/05/2026 (Dr MISRAOUI) : sans anomalie, pas d'œdème papillaire. Angio-IRM 11/05/2026 (Dr LEKHAL) : <span class="val-ok">pas d'HTIC, vascularisation normale</span> — mais <span class="val-high">légère hypotrophie hypophysaire (4–4,5 mm ; norme 6–7 mm)</span> confirmée. <strong>Consultation endocrinologique spécialisée requise en urgence.</strong></div>
+    <div class="pill-sub">Céphalées en casque persistantes + flou visuel bilatéral. <strong>Bilan ophtalmologique ×2 — tous deux normaux :</strong>
+ Fond d'œil Dr MISRAOUI (10/05/2026) : sans anomalie, acuité OD 8/10 /
+OG 10/10 ; Bilan complet Dr NOUIOUA (13/05/2026, dans le cadre du bilan
+de retentissement hypophysaire, Dr BOUHEDDA) : acuité <span class="val-ok">10/10 ODG</span>, tonus oculaire normal (12 mmHg ODG), fond d'œil <span class="val-ok">normal bilatéral</span> — pas de compression chiasmatique. Angio-IRM 11/05/2026 (Dr LEKHAL) : <span class="val-ok">pas d'HTIC, vascularisation normale</span> — mais <span class="val-high">légère hypotrophie hypophysaire (4–4,5 mm ; norme 6–7 mm)</span> confirmée. <strong>Consultation endocrinologique spécialisée requise en urgence.</strong></div>
   </div>
 
   <div class="pill-card">
@@ -1294,7 +1743,10 @@
       <strong>Attention :</strong> distraction facile, concentration difficile.
       <strong>Comportement :</strong> irritabilité marquée et accès de colère quasi-permanents.
       <strong>Maturité :</strong> comportement régressif malgré 15 ans.<br><br>
-      Ces signes peuvent être en lien avec l'hypothyroïdie chroniquement mal équilibrée (impact neurodéveloppemental), une atteinte hypophysaire, ou une carence (fer, B12, vit. D). Une évaluation neuropsychologique et/ou psychiatrique est fortement recommandée.
+      Ces signes peuvent être en lien avec l'hypothyroïdie chroniquement
+ mal équilibrée (impact neurodéveloppemental), une atteinte
+hypophysaire, ou une carence (fer, B12, vit. D). Une évaluation
+neuropsychologique et/ou psychiatrique est fortement recommandée.
     </div>
   </div>
 
@@ -1303,7 +1755,12 @@
       <span class="pill-tag badge-active">Actif — Confirmé histologie</span>
       <span class="pill-main">Gastrite auto-immune — Pan-gastrite chronique modérée · H. pylori négatif (biopsies)</span>
     </div>
-    <div class="pill-sub">Ac anti-cellules pariétales : Titre 1/320 (2021) puis &gt;100 U/L (Oct. 2025). FOGD (Dr Khodja, 05/11/2025) : pan-gastrite (antrale micronodulaire + fundique atrophique). <strong>Histologie (Dr Boucebha, 09/11/2025) : H. pylori NÉGATIF sur biopsies — pas d'atrophie vraie, pas de métaplasie.</strong> Confirme la gastrite auto-immune (Dr Hamraoui, 10/05/2026). Anti-TPO / Anti-TG en attente. Surveillance B12 régulière requise. Lymphangiectasies duodénales identifiées à la FOGD — à surveiller.</div>
+    <div class="pill-sub">Ac anti-cellules pariétales : Titre 1/320
+(2021) puis &gt;100 U/L (Oct. 2025). FOGD (Dr Khodja, 05/11/2025) :
+pan-gastrite (antrale micronodulaire + fundique atrophique). <strong>Histologie (Dr Boucebha, 09/11/2025) : H. pylori NÉGATIF sur biopsies — pas d'atrophie vraie, pas de métaplasie.</strong>
+ Confirme la gastrite auto-immune (Dr Hamraoui, 10/05/2026). Anti-TPO /
+Anti-TG en attente. Surveillance B12 régulière requise.
+Lymphangiectasies duodénales identifiées à la FOGD — à surveiller.</div>
   </div>
 
   <div class="pill-card">
@@ -1317,17 +1774,12 @@
   <div class="pill-card">
     <div class="pill-row">
       <span class="pill-tag badge-monitoring">Surveillance</span>
-      <span class="pill-main">Kyste thyroïdien — lobe droit (0,47 cm)</span>
-    </div>
-    <div class="pill-sub">Découvert à l'échographie thyroïdienne du 05/10/2024 (Dr H. Delileche, sonde 16 MHz Samsung HS 40). Volume thyroïdien globalement normal. Kyste de 0,47 cm à surveiller par échographie de contrôle.</div>
-  </div>
-
-  <div class="pill-card">
-    <div class="pill-row">
-      <span class="pill-tag badge-monitoring">Surveillance</span>
       <span class="pill-main">Aérocolie diffuse chronique + RGO</span>
     </div>
-    <div class="pill-sub">Aérocolie documentée depuis 2021, confirmée (+++) en 2025. RGO confirmé cliniquement par aryténoïdes rouges à la laryngoscopie (Dr Ayouche, 04/2026). Traitement spécifique du RGO non encore prescrit à ce jour.</div>
+    <div class="pill-sub">Aérocolie documentée depuis 2021, confirmée
+(+++) en 2025. RGO confirmé cliniquement par aryténoïdes rouges à la
+laryngoscopie (Dr Ayouche, 04/2026). Traitement spécifique du RGO non
+encore prescrit à ce jour.</div>
   </div>
 
   <div class="pill-card">
@@ -1335,7 +1787,10 @@
       <span class="pill-tag badge-monitoring">Surveillance</span>
       <span class="pill-main">Hypertrophie obstructive des cornets inférieurs (++++)</span>
     </div>
-    <div class="pill-sub">Diagnostiquée à la nasoscopie du 28/04/2026. Muqueuse nasale congestive, rhinite postérieure. Traitement médical (7j) inefficace. Cautérisation des cornets évoquée par Dr Ayouche — décision non prise.</div>
+    <div class="pill-sub">Diagnostiquée à la nasoscopie du 28/04/2026.
+Muqueuse nasale congestive, rhinite postérieure. Traitement médical (7j)
+ inefficace. Cautérisation des cornets évoquée par Dr Ayouche — décision
+ non prise.</div>
   </div>
 
   <div class="pill-card">
@@ -1343,7 +1798,10 @@
       <span class="pill-tag badge-monitoring">Surveillance</span>
       <span class="pill-main">Anémie ferriprive / Carence en fer</span>
     </div>
-    <div class="pill-sub">Hémoglobine 10,3 g/dl (Oct. 2025), fer sérique 40 µg/dl (↓), ferritine limite basse. Lymphocytose intraépithéliale duodénale ~30% (histologie 09/11/2025) — à surveiller (peut contribuer à la malabsorption). Supplémentation en fer non prescrite à ce jour.</div>
+    <div class="pill-sub">Hémoglobine 10,3 g/dl (Oct. 2025), fer sérique
+ 40 µg/dl (↓), ferritine limite basse. Lymphocytose intraépithéliale
+duodénale ~30% (histologie 09/11/2025) — à surveiller (peut contribuer à
+ la malabsorption). Supplémentation en fer non prescrite à ce jour.</div>
   </div>
 
   <div class="pill-card">
@@ -1351,7 +1809,9 @@
       <span class="pill-tag badge-monitoring">Surveillance</span>
       <span class="pill-main">Bouchons de cérumen récidivants</span>
     </div>
-    <div class="pill-sub">Dernier bouchon retiré le 28/04/2026 (oreille gauche). Tympans intacts, légère calcification tympanique mineure bénigne. Suivi ORL périodique recommandé.</div>
+    <div class="pill-sub">Dernier bouchon retiré le 28/04/2026 (oreille
+gauche). Tympans intacts, légère calcification tympanique mineure
+bénigne. Suivi ORL périodique recommandé.</div>
   </div>
 
   <!-- TRAITEMENTS EN COURS -->
@@ -1365,9 +1825,25 @@
     <div class="pill-row">
       <span class="pill-tag badge-medication">Endocrinologie — À vie</span>
       <span class="pill-main">Levothyrox (L-Thyroxine)</span>
-      <span class="pill-detail">200 µg/jour — depuis Nov. 2025</span>
+      <span class="pill-detail">225 µg/jour — depuis 13/05/2026 (Dr BOUHEDDA)</span>
     </div>
-    <div class="pill-sub">2 comprimés de 100 µg, le matin à jeun. Prescrit par Pr. K.F. DJIDEL (CMC Kouba, ordonnance du 02/11/2025). Contrôle TSH post-ajustement à programmer en urgence.</div>
+    <div class="pill-sub">Dose augmentée de 200 µg à <strong>225 µg/jour</strong>
+ par Dr BOUHEDDA Rédha le 13/05/2026, suite à la TSH 19,25 µUI/ml.
+Mesure temporaire dans l'attente de la prise en charge spécialisée
+(Prof. Azzouz, Hôpital Bainem). Précédente ordonnance : Pr. K.F. DJIDEL
+(CMC Kouba, 02/11/2025) à 200 µg.</div>
+  </div>
+
+  <div class="pill-card">
+    <div class="pill-row">
+      <span class="pill-tag badge-medication">Endocrinologie — Nouveau</span>
+      <span class="pill-main">Vitamine D — Injection Intramusculaire (IM)</span>
+      <span class="pill-detail">Prescrit par Dr BOUHEDDA — 13/05/2026</span>
+    </div>
+    <div class="pill-sub">Vitamine D IM prescrite pour contourner la malabsorption digestive liée à la gastrite auto-immune. Vit D dosée à <strong>23,6 ng/ml</strong>
+ le 13/05/2026 — insuffisante (N: 30–100) malgré une amélioration
+notable depuis Jan. 2026 (8 ng/ml). Voie IM choisie après échec présumé
+de la supplémentation orale.</div>
   </div>
 
   <div class="pill-card">
@@ -1376,7 +1852,9 @@
       <span class="pill-main">Forlax (Macrogol — laxatif osmotique)</span>
       <span class="pill-detail">40 g/jour (4 sachets) — 3 mois — Pr. YAGOUBI (25/01/2026)</span>
     </div>
-    <div class="pill-sub">Prescrit par <strong>Pr. Abdelghani YAGOUBI</strong> (Gastro-entérologie Pédiatrique) — ordonnance du 25/01/2026. Dose progressive : 3,5 sachets/j (26/11/2025) → 4 sachets/j (25/01/2026).</div>
+    <div class="pill-sub">Prescrit par <strong>Pr. Abdelghani YAGOUBI</strong>
+ (Gastro-entérologie Pédiatrique) — ordonnance du 25/01/2026. Dose
+progressive : 3,5 sachets/j (26/11/2025) → 4 sachets/j (25/01/2026).</div>
   </div>
 
   <div class="pill-card">
@@ -1434,7 +1912,9 @@
       <span class="pill-tag badge-resolved">Arrêté — Court terme</span>
       <span class="pill-main">Traitement orthopédique (Dr MOUALEK, 27/12/2025)</span>
     </div>
-    <div class="pill-sub">Solupred 20 mg (3 cp/matin × 5j) + Clofenal 25 mg + Dolyp 500 mg + Tauflex cap. — traitement court terme pour douleurs articulaires. Terminé.</div>
+    <div class="pill-sub">Solupred 20 mg (3 cp/matin × 5j) + Clofenal 25
+ mg + Dolyp 500 mg + Tauflex cap. — traitement court terme pour douleurs
+ articulaires. Terminé.</div>
   </div>
 
   <div class="pill-card">
@@ -1442,7 +1922,9 @@
       <span class="pill-tag badge-resolved">Arrêté — Remplacé</span>
       <span class="pill-main">Traitement gastro Dr RAHEM (30/10/2025)</span>
     </div>
-    <div class="pill-sub">Lisinox 20 mg + Nobac susp. + Spasfon Lyoc 80 mg + Debridat susp. — traitement initial de courte durée, remplacé par la prise en charge de Pr. YAGOUBI.</div>
+    <div class="pill-sub">Lisinox 20 mg + Nobac susp. + Spasfon Lyoc 80
+mg + Debridat susp. — traitement initial de courte durée, remplacé par
+la prise en charge de Pr. YAGOUBI.</div>
   </div>
 
   <!-- RESTRICTIONS ALIMENTAIRES -->
@@ -1457,7 +1939,11 @@
       <span class="pill-tag badge-allergy">À réévaluer</span>
       <span class="pill-main">Bananes · Chocolat · Riz · Carottes</span>
     </div>
-    <div class="pill-sub">Éviction prescrite initialement. <strong>Non validée par les autres spécialistes.</strong> À réévaluer à la lumière des résultats histologiques (H. pylori négatif, pas d'atrophie villositaire duodénale, pas de maladie cœliaque) et lors de la prochaine consultation multidisciplinaire avec Pr. YAGOUBI.</div>
+    <div class="pill-sub">Éviction prescrite initialement. <strong>Non validée par les autres spécialistes.</strong>
+ À réévaluer à la lumière des résultats histologiques (H. pylori
+négatif, pas d'atrophie villositaire duodénale, pas de maladie cœliaque)
+ et lors de la prochaine consultation multidisciplinaire avec Pr.
+YAGOUBI.</div>
   </div>
 
   <!-- MÉDECINS RÉFÉRENTS -->
@@ -1487,7 +1973,9 @@
       <span class="pill-main">Pr. Abdelghani YAGOUBI</span>
       <span class="pill-detail">Gastro-entérologie Pédiatrique — Nov. 2025, Jan. 2026</span>
     </div>
-    <div class="pill-sub">Prescriptions Forlax : 26/11/2025 (3,5 sachets/j · 1 mois) + 25/01/2026 (4 sachets/j · 3 mois). A supervisé la FOGD réalisée par Dr Hassen Khodja (05/11/2025).</div>
+    <div class="pill-sub">Prescriptions Forlax : 26/11/2025 (3,5
+sachets/j · 1 mois) + 25/01/2026 (4 sachets/j · 3 mois). A supervisé la
+FOGD réalisée par Dr Hassen Khodja (05/11/2025).</div>
   </div>
   <div class="pill-card">
     <div class="pill-row">
@@ -1495,7 +1983,10 @@
       <span class="pill-main">Dr Hassen Khodja</span>
       <span class="pill-detail">Gastro-entérologie — FOGD 05/11/2025</span>
     </div>
-    <div class="pill-sub">Réalisation de la FOGD sous sédation (05/11/2025) avec biopsies : pan-gastrite (antrale micronodulaire + fundique atrophique) + lymphangiectasies duodénales. Demande ANAPATH réf. HU28KJ.</div>
+    <div class="pill-sub">Réalisation de la FOGD sous sédation
+(05/11/2025) avec biopsies : pan-gastrite (antrale micronodulaire +
+fundique atrophique) + lymphangiectasies duodénales. Demande ANAPATH
+réf. HU28KJ.</div>
   </div>
   <div class="pill-card">
     <div class="pill-row">
@@ -1503,7 +1994,10 @@
       <span class="pill-main">Dr Boucebha Abdelkader</span>
       <span class="pill-detail">Anatomopathologie — Rapport histologique 09/11/2025 (Réf. HU28KJ)</span>
     </div>
-    <div class="pill-sub">Analyse de 3 tubes de biopsies (FOGD Dr Khodja). Conclusion : pan-gastrite chronique modérée, H. pylori négatif, pas d'atrophie vraie, pas de métaplasie ni malignité. Muqueuse duodénale normale.</div>
+    <div class="pill-sub">Analyse de 3 tubes de biopsies (FOGD Dr
+Khodja). Conclusion : pan-gastrite chronique modérée, H. pylori négatif,
+ pas d'atrophie vraie, pas de métaplasie ni malignité. Muqueuse
+duodénale normale.</div>
   </div>
   <div class="pill-card">
     <div class="pill-row">
@@ -1557,11 +2051,23 @@
   </div>
   <div class="pill-card">
     <div class="pill-row">
+      <span class="pill-tag badge-specialist">Ophtalmologie — Chirurgien</span>
+      <span class="pill-main">Dr NOUIOUA Inès</span>
+      <span class="pill-detail">Chirurgien Ophtalmologiste — Clinique d'Ophtalmologie Nouioua — 13/05/2026</span>
+    </div>
+    <div class="pill-sub">Clinique d'Ophtalmologie Nouioua · Djenane
+Kaddour Belaid (près Hammam Hamama), Khemis Miliana, Aïn Defla · Tél. :
+0552 177 693 / 0555 573 093 / 0794 928 786 · <a href="mailto:nouioua.ines@gmail.com" style="color:var(--accent);">nouioua.ines@gmail.com</a> · Bilan de retentissement atrophie hypophysaire — 13/05/2026</div>
+  </div>
+  <div class="pill-card">
+    <div class="pill-row">
       <span class="pill-tag badge-specialist">Neurologie</span>
       <span class="pill-main">Dr Sennia Imane Amel (Épouse TAANE)</span>
       <span class="pill-detail">Diplômée Faculté de Médecine d'Alger · N° Ordre : 44/536</span>
     </div>
-    <div class="pill-sub">Clinique de Neurologie · Rue Ouali AbdelKader (Cité Halaimi) N°217, Khemis Miliana, W. Aïn Defla · Tél. : 0673 433 124 / 0794 003 643 · <a href="mailto:senniaamelimane@gmail.com" style="color:var(--accent);">senniaamelimane@gmail.com</a> · Consultations : 10/05/2026 &amp; 12/05/2026</div>
+    <div class="pill-sub">Clinique de Neurologie · Rue Ouali AbdelKader
+(Cité Halaimi) N°217, Khemis Miliana, W. Aïn Defla · Tél. : 0673 433 124
+ / 0794 003 643 · <a href="mailto:senniaamelimane@gmail.com" style="color:var(--accent);">senniaamelimane@gmail.com</a> · Consultations : 10/05/2026 &amp; 12/05/2026</div>
   </div>
   <div class="pill-card">
     <div class="pill-row">
@@ -1610,7 +2116,13 @@
     <div class="gap-icon">!</div>
     <div class="gap-text">
       <strong>Priorité 1 — Consultation endocrinologique spécialisée</strong>
-      L'hypotrophie hypophysaire confirmée par l'Angio-IRM (11/05/2026) renforce la suspicion d'hypothyroïdie d'origine centrale (secondaire) soulevée depuis 2014. Une glande hypophysaire sous-dimensionnée peut expliquer la dérégulation chronique sévère de la TSH malgré des doses croissantes de Levothyrox. Confrontation clinique avec les données hormonales indispensable — endocrinologue spécialisé en axe hypothalamo-hypophyso-thyroïdien requis en urgence.
+      L'hypotrophie hypophysaire confirmée par l'Angio-IRM (11/05/2026)
+renforce la suspicion d'hypothyroïdie d'origine centrale (secondaire)
+soulevée depuis 2014. Une glande hypophysaire sous-dimensionnée peut
+expliquer la dérégulation chronique sévère de la TSH malgré des doses
+croissantes de Levothyrox. Confrontation clinique avec les données
+hormonales indispensable — endocrinologue spécialisé en axe
+hypothalamo-hypophyso-thyroïdien requis en urgence.
     </div>
   </div>
 
@@ -1618,23 +2130,56 @@
     <div class="gap-icon">!</div>
     <div class="gap-text">
       <strong>Priorité 2 — Résultats bilans immunologiques en attente (CHU Blida)</strong>
-      Anti-TPO et Anti-TG (Dr Hamraoui, 10/05/2026) + TS et EDP (Dr H. ROUAGHI, CHU Blida, 11/05/2026). Ces résultats sont indispensables à la stratégie thérapeutique auto-immune globale.
+      Anti-TPO et Anti-TG (Dr Hamraoui, 10/05/2026) + TS et EDP (Dr H.
+ROUAGHI, CHU Blida, 11/05/2026). Ces résultats sont indispensables à la
+stratégie thérapeutique auto-immune globale.
+    </div>
+  </div>
+
+  <div class="gap-card" style="border-left-color: var(--ok); background: var(--ok-soft); border-color: #b4d9c8;">
+    <div class="gap-icon" style="color: var(--ok);">✓</div>
+    <div class="gap-text">
+      <strong style="color: var(--ok);">Priorité 3 — RÉSOLUE · Bilan hormonal complet Dr BOUHEDDA reçu (13/05/2026)</strong>
+      TSH 19,25 (↑↑) · Vit D 23,6 (insuffisante) · FSH / LH /
+Testostérone / Prolactine / Cortisol / ACTH / IGF-1 / PTH / Calcémie /
+Phosphorémie / Protéines : tous dans les normes. Résultats intégrés à la
+ chronologie. Bilan hypophysaire fonctionnel rassurant malgré
+l'hypotrophie morphologique.
     </div>
   </div>
 
   <div class="gap-card">
     <div class="gap-icon">!</div>
     <div class="gap-text">
-      <strong>Priorité 3 — Résultats bilan hormonal complet en attente</strong>
-      Bilan prescrit par Dr BOUHEDDA Rédha (12/05/2026) : TSH, Calcémie, Phosphorémie, Protides, PTH, FSH, LH, Prolactine, Cortisol, ACTH, Testostérone, Vitamine D, IGF-1. Essentiels pour évaluer l'axe hypothalamo-hypophysaire en corrélation avec l'hypotrophie hypophysaire objectivée.
+      <strong>Priorité 3b — HTIC bénigne : investigations complémentaires requises</strong>
+      Dr BOUHEDDA suspecte une HTIC bénigne secondaire à l'hypothyroïdie
+ chronique. L'absence d'œdème papillaire à deux bilans ophtalmologiques
+(10/05 et 13/05/2026) est atypique mais non éliminatoire. Une ponction
+lombaire avec mesure de la pression du LCR devrait être envisagée en
+milieu hospitalier pour confirmer ou infirmer cette hypothèse — à
+intégrer au programme d'hospitalisation à Bainem.
     </div>
   </div>
 
   <div class="gap-card">
     <div class="gap-icon">!</div>
     <div class="gap-text">
-      <strong>Priorité 4 — Contrôle TSH post-augmentation (Levothyrox 200 µg)</strong>
-      La dose a été augmentée à 200 µg le 02/11/2025. Aucun résultat de contrôle TSH sous cette dose n'est documenté. Dosage TSH + FT4 à réaliser pour confirmer l'efficacité du traitement actuel.
+      <strong>Priorité 3c — Suivi urgence hospitalisaton Prof. Azzouz (Hôpital Bainem)</strong>
+      Courrier de référence émis par Dr BOUHEDDA le 13/05/2026. La prise
+ de contact et la confirmation du rendez-vous d'hospitalisation sont à
+suivre activement. Apporter l'intégralité de ce dossier (chronologie +
+tous les bilans originaux) à l'admission.
+    </div>
+  </div>
+
+  <div class="gap-card" style="border-left-color: var(--ok); background: var(--ok-soft); border-color: #b4d9c8;">
+    <div class="gap-icon" style="color: var(--ok);">✓</div>
+    <div class="gap-text">
+      <strong style="color: var(--ok);">Priorité 4 — RÉSOLUE · TSH contrôlée post-200 µg : 19,25 µUI/ml (13/05/2026)</strong>
+      La TSH sous 200 µg est désormais documentée : 19,25 µUI/ml —
+déséquilibre sévère. Dr BOUHEDDA a augmenté la dose à 225 µg le
+13/05/2026. Un nouveau contrôle TSH + FT4 devra être planifié après
+stabilisation sous 225 µg et prise en charge à Bainem.
     </div>
   </div>
 
@@ -1642,23 +2187,39 @@
     <div class="gap-icon">!</div>
     <div class="gap-text">
       <strong>Priorité 5 — Gastrite auto-immune : prise en charge spécialisée à initier</strong>
-      Histologie confirmée (Dr Boucebha, 09/11/2025) : pan-gastrite chronique modérée, H. pylori négatif. La gastrite est auto-immune (Ac anti-cellules pariétales très positifs, absence de facteur intrinsèque). Une prise en charge immunologique adaptée et un suivi gastro-entérologique intégrant la composante auto-immune sont indispensables.
+      Histologie confirmée (Dr Boucebha, 09/11/2025) : pan-gastrite
+chronique modérée, H. pylori négatif. La gastrite est auto-immune (Ac
+anti-cellules pariétales très positifs, absence de facteur intrinsèque).
+ Une prise en charge immunologique adaptée et un suivi
+gastro-entérologique intégrant la composante auto-immune sont
+indispensables.
     </div>
   </div>
 
   <div class="gap-card">
     <div class="gap-icon">!</div>
     <div class="gap-text">
-      <strong>Priorité 6 — Surveillance kyste thyroïdien lobe droit (0,47 cm)</strong>
-      Découvert à l'échographie thyroïdienne du 05/10/2024. Aucune échographie de contrôle documentée depuis. Un contrôle échographique thyroïdien de suivi est recommandé pour surveillance évolutive du kyste.
+      <strong>Priorité 6 — Surveillance lymphangiectasies duodénales</strong>
+
+      Identifiées à la FOGD (Dr Khodja, 05/11/2025). Les biopsies
+systématiques montrent une lymphocytose intraépithéliale ~30% et un
+chorion œdémateux — sans atrophie villositaire. À surveiller dans le
+contexte d'une possible malabsorption contribuant à l'instabilité
+thyroïdienne.
     </div>
   </div>
 
   <div class="gap-card">
     <div class="gap-icon">!</div>
     <div class="gap-text">
-      <strong>Priorité 7 — Surveillance lymphangiectasies duodénales</strong>
-      Identifiées à la FOGD (Dr Khodja, 05/11/2025). Les biopsies systématiques montrent une lymphocytose intraépithéliale ~30% et un chorion œdémateux — sans atrophie villositaire. À surveiller dans le contexte d'une possible malabsorption contribuant à l'instabilité thyroïdienne.
+      <strong>Priorité 7 — Phosphatases alcalines très élevées (Fév. 2022) — jamais réévaluées</strong>
+      Taux de 706 UI/l (norme &lt;400), confirmé à deux reprises par le
+laboratoire (Dr HOUTI, 20/02/2022). Dans le contexte d'une hypothyroïdie
+ sévèrement déséquilibrée (TSH 18,24 µUI/ml), d'un retard d'âge osseux
+documenté (2016) et d'une prolactine légèrement élevée à la même date,
+aucune investigation complémentaire (bilan hépatique, osseux, ou
+contrôle phosphatases) n'est documentée depuis. À inclure dans le bilan
+hormonal en cours.
     </div>
   </div>
 
@@ -1666,14 +2227,20 @@
     <div class="gap-icon">!</div>
     <div class="gap-text">
       <strong>Priorité 8 — Évaluation neuropsychologique non réalisée</strong>
-      Troubles mnésiques, cognitifs et comportementaux (irritabilité, régression) signalés mais non évalués par un spécialiste. Une évaluation neuropsychologique est fortement recommandée, en lien avec l'impact possible de l'hypothyroïdie chronique mal contrôlée sur le développement cérébral.
+      Troubles mnésiques, cognitifs et comportementaux (irritabilité,
+régression) signalés mais non évalués par un spécialiste. Une évaluation
+ neuropsychologique est fortement recommandée, en lien avec l'impact
+possible de l'hypothyroïdie chronique mal contrôlée sur le développement
+ cérébral.
     </div>
   </div>
 
   <!-- PIED DE PAGE -->
   <div class="doc-footer">
-    <span class="footer-note">Compilé à partir des documents cliniques originaux et du récit de la mère · Mis à jour : 13 Mai 2026 · À présenter à chaque rendez-vous médical</span>
-    <span class="footer-date">Dernière mise à jour : 13 Mai 2026</span>
+    <span class="footer-note">Compilé à partir des documents cliniques
+originaux et du récit de la mère · Mis à jour : 14 Mai 2026 · À
+présenter à chaque rendez-vous médical</span>
+    <span class="footer-date">Dernière mise à jour : 14 Mai 2026</span>
   </div>
 
   <!-- CRÉDIT AUTEUR -->
@@ -1729,4 +2296,5 @@ function toggleBilan(btn) {
 }
 </script>
 
-</body></html>
+
+<div id="emojidots_data_loaded" style="display: none;">true</div><div id="emojidots_state" style="display: none;">emoji_active</div></body></html>
